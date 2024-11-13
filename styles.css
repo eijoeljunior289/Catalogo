@@ -137,6 +137,6 @@ footer {
 /* Media query para telas ainda menores (mobile) */
 @media (max-width: 480px) {
     .game-list {
-        grid-template-columns: 1fr; /* Coloca uma coluna em telas muito pequenas */
+        grid-template-columns: repeat(2, 1fr); /* Coloca uma coluna em telas muito pequenas */
     }
 }
