@@ -91,7 +91,7 @@ footer {
 /* Adiciona o estilo do grid para a lista de jogos */
 .game-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Múltiplas colunas que se adaptam */
     gap: 20px;
     padding: 20px;
 }
@@ -125,4 +125,18 @@ footer {
     margin-top: 10px;
     max-width: 120px;
     height: auto;
+}
+
+/* Media query para telas pequenas */
+@media (max-width: 768px) {
+    .game-list {
+        grid-template-columns: repeat(2, 1fr); /* Coloca 2 colunas quando a tela for menor */
+    }
+}
+
+/* Media query para telas ainda menores (mobile) */
+@media (max-width: 480px) {
+    .game-list {
+        grid-template-columns: 1fr; /* Coloca uma coluna em telas muito pequenas */
+    }
 }
