@@ -130,13 +130,13 @@ footer {
 /* Media query para telas pequenas */
 @media (max-width: 768px) {
     .game-list {
-        grid-template-columns: repeat(2, 1fr); /* Coloca 2 colunas quando a tela for menor */
+        grid-template-columns: repeat(2, 1fr); /* Sempre duas colunas em telas pequenas */
     }
 }
 
-/* Media query para telas ainda menores (mobile) */
+/* Media query para dispositivos móveis */
 @media (max-width: 480px) {
     .game-list {
-        grid-template-columns: repeat(2, 1fr); /* Coloca uma coluna em telas muito pequenas */
+        grid-template-columns: repeat(2, 1fr); /* Garante que sempre terão duas colunas no celular */
     }
 }
