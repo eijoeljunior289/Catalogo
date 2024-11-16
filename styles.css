@@ -1,142 +1,131 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
 
-ol {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    list-style-type: none; 
-    padding: 0; 
-  }  
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-  ol h3, ol {
-    padding: 20px;
-    text-align: center;
-  }
-  
-  ol {
-    list-style-type: none;
-    padding: 0;
-  }
-  
+        /* Cabeçalho */
+        .header-container {
+            background-color: #2f9e41;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
 
-footer {
-    text-align: center;
-    padding: 5px;
-    background-color: #2f9e41;
-    color: #000;
-  }
-  
-.header-container {
-    background-color: #2f9e41;
-    color: white;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+        .header-container img.logo {
+            height: 50px;
+        }
 
-.header-container h1 {
-    font-size: 1.5em;
-}
+        .header-container h1 {
+            font-size: 1.5em;
+            flex-grow: 1;
+        }
 
-.search-bar {
-    padding: 5px;
-    border-radius: 5px;
-    border: none;
-}
+        .search-bar {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 1em;
+            width: 100%;
+            max-width: 300px;
+        }
 
-.game-list {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
-    gap: 20px;
-    justify-content: center;
-}
+        /* Lista de jogos */
+        .game-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
 
-.game-card {
-    background-color: white;
-    width: 200px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 10px;
-}
+        .game-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
 
-.game-card img {
-    width: 100%;
-    border-radius: 8px;
-}
+        .game-card:hover {
+            transform: scale(1.05);
+        }
 
-.game-card h3 {
-    font-size: 1.2em;
-    margin: 10px 0;
-}
+        .game-card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
 
-.game-desc {
-    font-size: 0.9em;
-    color: #666;
-    margin: 5px 0;
-}
+        .game-card h3 {
+            font-size: 1.2em;
+            margin: 15px 0;
+        }
 
-/* Adiciona o estilo do grid para a lista de jogos */
-.game-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Múltiplas colunas que se adaptam */
-    gap: 20px;
-    padding: 20px;
-}
+        .game-card p {
+            color: #555;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
 
-/* Estilo para cada cartão de jogo */
-.game-card {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    text-align: center;
-    padding: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+        .game-card a img {
+            width: 120px;
+            margin-bottom: 15px;
+        }
 
-/* Imagem do jogo dentro do cartão */
-.game-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
+        /* Rodapé */
+        footer {
+            text-align: center;
+            background-color: #2f9e41;
+            color: white;
+            padding: 15px;
+            font-size: 0.9em;
+        }
 
-/* Título do jogo */
-.game-card h3 {
-    font-size: 1.2em;
-    margin: 10px 0;
-}
+        footer small {
+            display: block;
+        }
 
-/* Estilo do link do Google Play */
-.game-card a img {
-    margin-top: 10px;
-    max-width: 120px;
-    height: auto;
-}
+        /* Grupo de estudo */
+        .group-links {
+            text-align: center;
+            margin: 20px 0;
+        }
 
-/* Media query para telas pequenas */
-@media (max-width: 768px) {
-    .game-list {
-        grid-template-columns: repeat(2, 1fr); /* Sempre duas colunas em telas pequenas */
-    }
-}
+        .group-links a {
+            display: inline-block;
+            margin: 0 10px;
+        }
 
-/* Media query para dispositivos móveis */
-@media (max-width: 480px) {
-    .game-list {
-        grid-template-columns: repeat(2, 1fr); /* Garante que sempre terão duas colunas no celular */
-    }
-}
+        .group-links img {
+            width: 40px;
+            height: 40px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .game-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .game-list {
+                grid-template-columns: 1fr;
+            }
+        }
