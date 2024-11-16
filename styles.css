@@ -89,6 +89,17 @@
             margin-bottom: 15px;
         }
 
+        /* Estilo para centralizar a imagem do Instagram */
+        .instagram-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .instagram-container a img {
+            width: 40px;
+            height: 40px;
+        }
+
         /* Rodapé */
         footer {
             text-align: center;
@@ -105,12 +116,12 @@
         /* Responsividade */
         @media (max-width: 720px) {
             .game-list {
-                grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
         @media (max-width: 480px) {
             .game-list {
-                grid-template-columns: 1fr; /* 1 coluna em telas menores que 480px */
+                grid-template-columns: 1fr;
             }
         }
