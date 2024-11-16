@@ -122,16 +122,11 @@
 }
 
 /* Para telas pequenas (como smartphones), queremos 2 colunas */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .game-list {
         grid-template-columns: repeat(2, 1fr); /* Duas colunas */
     }
 }
 
-/* Para telas muito pequenas (como celulares em modo retrato), podemos fazer os cards ficarem em uma única coluna */
-@media (max-width: 480px) {
-    .game-list {
-        grid-template-columns: 1fr; /* Uma coluna */
-    }
-}
+
 
