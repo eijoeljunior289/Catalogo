@@ -96,7 +96,7 @@
 
        .game-card a {
           position: absolute;
-          bottom: 20px; /* Distância do final da div */
+          bottom: 5px; /* Distância do final da div */
           left: 50%;
           transform: translateX(-50%); /* Alinha a imagem ao centro */
        }
