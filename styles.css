@@ -113,15 +113,25 @@
             display: block;
         }
 
-        /* Responsividade */
-        @media (max-width: 720px) {
-            .game-list {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
+       /* Adiciona uma coluna por padrão */
+.game-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajuste o minmax para o tamanho que deseja */
+    gap: 20px; /* Espaçamento entre os cartões */
+    padding: 20px;
+}
 
-        @media (max-width: 480px) {
-            .game-list {
-                grid-template-columns: 1fr;
-            }
-        }
+/* Para telas pequenas (como smartphones), queremos 2 colunas */
+@media (max-width: 768px) {
+    .game-list {
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+    }
+}
+
+/* Para telas muito pequenas (como celulares em modo retrato), podemos fazer os cards ficarem em uma única coluna */
+@media (max-width: 480px) {
+    .game-list {
+        grid-template-columns: 1fr; /* Uma coluna */
+    }
+}
+
