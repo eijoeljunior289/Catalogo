@@ -89,6 +89,19 @@
             margin-bottom: 15px;
         }
 
+        .game-card {
+           position: relative; /* Necessário para o posicionamento absoluto dentro do card */
+           padding-bottom: 50px; /* Espaço extra para que a imagem não sobreponha o conteúdo */
+       }
+
+       .game-card a {
+          position: absolute;
+          bottom: 10px; /* Distância do final da div */
+          left: 50%;
+          transform: translateX(-50%); /* Alinha a imagem ao centro */
+       }
+
+
         /* Estilo para centralizar a imagem do Instagram */
         .instagram-container {
             text-align: center;
