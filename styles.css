@@ -6,8 +6,9 @@
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
+            background-color: var(--background-color, #f5f5f5);
+            color: var(--text-color, #333);
+            transition: background-color 0.3s, color 0.3s;
         }
 
         a {
@@ -17,7 +18,7 @@
 
         /* Cabeçalho */
         .header-container {
-            background-color: #2f9e41;
+            background-color: var(--header-bg, #2f9e41);
             color: white;
             padding: 15px 20px;
             display: flex;
@@ -53,7 +54,7 @@
         }
 
         .game-card {
-            background-color: #fff;
+            background-color: var(--card-bg, #fff);
             border: 1px solid #ddd;
             border-radius: 10px;
             overflow: hidden;
@@ -91,7 +92,7 @@
         /* Rodapé */
         footer {
             text-align: center;
-            background-color: #2f9e41;
+            background-color: var(--header-bg, #2f9e41);
             color: white;
             padding: 15px;
             font-size: 0.9em;
@@ -101,31 +102,15 @@
             display: block;
         }
 
-        /* Grupo de estudo */
-        .group-links {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .group-links a {
-            display: inline-block;
-            margin: 0 10px;
-        }
-
-        .group-links img {
-            width: 40px;
-            height: 40px;
-        }
-
         /* Responsividade */
-        @media (max-width: 768px) {
+        @media (max-width: 720px) {
             .game-list {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(2, 1fr); /* 2 colunas */
             }
         }
 
         @media (max-width: 480px) {
             .game-list {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr; /* 1 coluna em telas menores que 480px */
             }
         }
