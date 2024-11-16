@@ -96,42 +96,10 @@
 
        .game-card a {
           position: absolute;
-          bottom: 10px; /* Distância do final da div */
+          bottom: 20px; /* Distância do final da div */
           left: 50%;
           transform: translateX(-50%); /* Alinha a imagem ao centro */
        }
-.game-card {
-    position: relative; /* Necessário para o posicionamento absoluto dentro do card */
-    padding-bottom: 50px; /* Espaço extra para a imagem da Google Play */
-    height: 300px; /* Defina uma altura fixa ou mínima para os cards */
-}
-
-.game-card h3 {
-    position: absolute;
-    top: 10px; /* Distância do topo da div */
-    left: 50%;
-    transform: translateX(-50%); /* Alinha o título ao centro */
-    margin: 0;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.game-card p {
-    position: absolute;
-    top: 50%; /* Centraliza verticalmente */
-    left: 50%;
-    transform: translate(-50%, -50%); /* Ajusta o elemento para ficar bem centralizado */
-    font-size: 14px;
-    margin: 0;
-}
-
-.game-card a {
-    position: absolute;
-    bottom: 10px; /* Distância do final da div */
-    left: 50%;
-    transform: translateX(-50%); /* Alinha a imagem da Google Play ao centro */
-}
-
 
 
         /* Estilo para centralizar a imagem do Instagram */
