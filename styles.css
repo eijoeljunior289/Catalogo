@@ -16,6 +16,10 @@
             color: inherit;
         }
 
+
+        
+        
+
         /* Cabeçalho */
         .header-container {
             background-color: var(--header-bg, #2f9e41);
@@ -26,6 +30,12 @@
             justify-content: space-between;
             gap: 20px;
         }
+
+        .game-link {
+            display: block;
+            margin-top: 10px; /* Adicione a quantidade de espaço desejada */
+        }
+        
 
         .header-container img.logo {
             height: 50px;
@@ -140,6 +150,10 @@
         grid-template-columns: repeat(2, 1fr); /* Duas colunas */
     }
 }
+
+
+
+
 
 
 
