@@ -1,124 +1,481 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        JOGOS IF BAIANO - Jogos Educativos
-    </title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="logos/logo.png" type="image/x-icon" />
+    <title>GEJiF</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Nunito+Sans:wght@200;300;400;600;700;800;900&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
+
 <body>
-    <header>
-        <div class="header-container">
-            
-            <img src="logos/logo.png" alt="Logo GEJiF" class="logo" style="height: 50px;">
-            <h1>JOGOS IF BAIANO</h1>
+    <header class="sticky">
+        <a href="#" class="logo"><img src="logos/logo.png" alt="Logo GEJiF" style="height: 50px;" /></a>
+        <h3>JOGOS IF BAIANO</h3>
+        <ul class="navmenu">
+            <li> <a href="#Jogos">Jogos</a></li>
+            <li> <a href="#Aplicativos">Aplicativos</a></li>
+            <li> <a href="#Lancamentos">Lançamentos</a></li>
+
+        </ul>
+        <div class="nav-icon">
+
+
             <input type="text" placeholder="Pesquisar um jogo" class="search-bar">
         </div>
     </header>
-    <main>
-        <br>
-        <h1>Em breve, o catálogo do GEJiF estará de cara nova!</h1>
-        <br>
-        <div class="game-list">
-            <div class="game-card">
-                <img src="logos/dg.jpg" alt="Dalton's Game">
-                <h3>Dalton's Game</h3>
-                <p>Educativo</p>
-                <p>Grátis</p>
-                <p>há <span class="release-time" data-release="2024-08-07"></span></p>
-                <h5>Requisitos mínimos:</h5>
-                <p>Android 12 ou superior</p>
-                <br>
-                <a href="https://play.google.com/store/apps/details?id=com.Shooter.DaltonsGame&pcampaignid=web_share"><img src="logos/googleplay.png" alt="Google Play Store"></a>
-            </div>
-            <div class="game-card">
-                <img src="logos/mmn.png" alt="Milenyum Math Navigator">
-                <h3>Milenyum Math Navigator</h3>
-                <p>Educativo</p>
-                <p>Grátis</p>
-                <p>há <span class="release-time" data-release="2024-08-04"></span></p>
-                <h5>Requisitos mínimos:</h5>
-                <p>Android 12 ou superior</p>
-                <br>
-                <a href="https://play.google.com/store/apps/details?id=com.IFBAIANO.MilenyumMathNavigator&pcampaignid=web_share"><img src="logos/googleplay.png"></a>
-            </div>
-            <div class="game-card">
-                <img src="logos/gss.png" alt="Geometric Shapes In Space">
-                <h3>Geometric Shapes In Space</h3>
-                <p>Educativo</p>
-                <p>Grátis</p>
-                <p>há <span class="release-time" data-release="2024-08-01"></span></p>
-                <h5>Requisitos mínimos:</h5>
-                <p>Android 12 ou superior</p>
-                <br>
-                <a href="https://play.google.com/store/apps/details?id=com.IFBAIANO.GeometricShapesInSpace&pcampaignid=web_share"><img src="logos/googleplay.png"></a>
-            </div>
-            <div class="game-card">
-                <img src="logos/njs.jpg" alt="Neon - Jogo de Soma">
-                <h3>Neon - Jogo de Soma</h3>
-                <p>Educativo</p>
-                <p>Grátis</p>
-                <p>há <span class="release-time" data-release="2024-07-31"></span></p>
-                <h5>Requisitos mínimos:</h5>
-                <p>Android 12 ou superior</p>
-                <br>
-                <a href="https://play.google.com/store/apps/details?id=com.IFbaiamo.NeonJogodesoma&pcampaignid=web_share"><img src="logos/googleplay.png"></a>
-            </div>
-            <div class="game-card">
-                <img src="logos/ne.png" alt="Números nas Estrelas">
-                <h3>Números nas Estrelas</h3>
-                <p>Educativo</p>
-                <p>Grátis</p>
-                <p>há <span class="release-time" data-release="2024-07-23"></span></p>
-                <h5>Requisitos mínimos:</h5>
-                <p>Android 12 ou superior</p>
-                <br>
-                <a href="https://play.google.com/store/apps/details?id=com.IFBAIANO.NUMEROSNASESTRELAS&pcampaignid=web_share"><img src="logos/googleplay.png"></a>
-            </div>
-            <div class="game-card">
-                <img src="logos/gm.png" alt="GamaMath">
-                <h3>GamaMath</h3>
-                <p>Educativo</p>
-                <p>Grátis</p>
-                <p>há <span class="release-time" data-release="2017-03-10"></span></p>
-                <h5>Requisitos mínimos:</h5>
-                <p>Android 2.3 ou superior</p>
-                <br>
-                <a href="https://play.google.com/store/apps/details?id=com.GamaCompany.GamaMath&pcampaignid=web_share"><img src="logos/googleplay.png"></a>
-            </div>
-            <div class="game-card">
-                <img src="logos/eg.png" alt="Elementos Geométricos">
-                <h3>Elementos Geométricos</h3>
-                <p>Educativo</p>
-                <p>Grátis</p>
-                <p>há <span class="release-time" data-release="2017-03-09"></span></p>
-                <h5>Requisitos mínimos:</h5>
-                <p>Android 2.3 ou superior</p>
-                <br>
-                <a href="https://play.google.com/store/apps/details?id=com.IFBAIANO.ElementosGeometricosria&pcampaignid=web_share"><img src="logos/googleplay.png"></a>
-            </div>
-            <div class="game-card">
-                <img src="logos/ov.jpg" alt="Oxe e as Vogais">
-                <h3>Oxe e as Vogais</h3>
-                <p>Educativo</p>
-                <p>Grátis</p>
-                <p>há <span class="release-time" data-release="2017-03-09"></span></p>
-                <h5>Requisitos mínimos:</h5>
-                <p>Android 2.3 ou superior</p>
-                <br>
-                <a href="https://play.google.com/store/apps/details?id=com.IFBAIANO.OXE&pcampaignid=web_share"><img src="logos/googleplay.png"></a>
-            </div>
+
+    <section class="main-home box-height" id="home-up">
+        <div class="main-text">
+            <h5>Lançamentos</h5>
+            <h1>
+                Confira novos <br />apps de 2024
+            </h1>
+            <p>Confira abaixo</p>
+            <a href="#Lancamentos" class="main-btn">Baixe já!<i class="bx bx-right-arrow-alt"></i
+        ></a>
         </div>
-  <footer>
-    <small>
-        Copyright © 2024 GEJiF. Desenvolvido por <a href="https://www.instagram.com/eijoeljunior/" target="_blank">Joel Júnior</a>. Todos os direitos reservados.
+    </section>
 
 
-    </small>
-  </footer>
 
-    <script src="script.js"></script>
+
+
+
+
+
+
+
+
+
+    <section id="Lancamentos" class="section-p1">
+        <div id="link" class="center-text">
+            <h2 class="title">Nossos <span>Lançamentos</span> de 2024</h2>
+            <p>Baixe e aproveite!</p>
+        </div>
+    </section>
+    <div class="game-list">
+        <div class="game-card">
+            <img src="logos/dg.jpg" alt="Dalton's Game">
+            <h3>Dalton's Game</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2024-08-07"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 12 ou superior</p>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=com.Shooter.DaltonsGame&pcampaignid=web_share"><img src="logos/googleplay.png" alt="Google Play Store"></a>
+        </div>
+
+        <div class="game-card">
+            <img src="logos/mmn.png" alt="Milenyum Math Navigator">
+            <h3>Milenyum Math Navigator</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2024-08-04"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 14 ou superior</p>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=com.IFBAIANO.MilenyumMathNavigator&pcampaignid=web_share"><img src="logos/googleplay.png"></a>
+        </div>
+
+        <div class="game-card">
+            <img src="logos/gss.png" alt="Geometric Shapes In Space">
+            <h3>Geometric Shapes In Space</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2024-08-01"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 14 ou superior</p>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=com.IFBAIANO.GeometricShapesInSpace&pcampaignid=web_share"><img src="logos/googleplay.png"></a>
+        </div>
+
+        <div class="game-card">
+            <img src="logos/njs.jpg" alt="Neon - Jogo de Soma">
+            <h3>Neon - Jogo de Soma</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2024-07-31"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 14 ou superior</p>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=com.IFbaiamo.NeonJogodesoma&pcampaignid=web_share"><img src="logos/googleplay.png"></a>
+        </div>
+
+        <div class="game-card">
+            <img src="logos/ne.png" alt="Números nas Estrelas">
+            <h3>Números nas Estrelas</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2024-07-23"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 14 ou superior</p>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=com.IFBAIANO.NUMEROSNASESTRELAS&pcampaignid=web_share"><img src="logos/googleplay.png"></a>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <section class="trending-product" id="Jogos">
+        <div class="center-text">
+            <h2 class="title">Nossos <span>Jogos</span> para você</h2>
+            <p>Baixe e aproveite!</p>
+        </div>
+    </section>
+    <div class="game-list">
+        <div class="game-card">
+            <img src="logos/dg.jpg" alt="Dalton's Game">
+            <h3>Dalton's Game</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2024-08-07"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 14 ou superior</p>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=com.Shooter.DaltonsGame&pcampaignid=web_share"><img src="logos/googleplay.png" alt="Google Play Store"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/mmn.png" alt="Milenyum Math Navigator">
+            <h3>Milenyum Math Navigator</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2024-08-04"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 14 ou superior</p>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=com.IFBAIANO.MilenyumMathNavigator&pcampaignid=web_share"><img src="logos/googleplay.png"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/gss.png" alt="Geometric Shapes In Space">
+            <h3>Geometric Shapes In Space</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2024-08-01"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 14 ou superior</p>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=com.IFBAIANO.GeometricShapesInSpace&pcampaignid=web_share"><img src="logos/googleplay.png"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/njs.jpg" alt="Neon - Jogo de Soma">
+            <h3>Neon - Jogo de Soma</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2024-07-31"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 14 ou superior</p>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=com.IFbaiamo.NeonJogodesoma&pcampaignid=web_share"><img src="logos/googleplay.png"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/ne.png" alt="Números nas Estrelas">
+            <h3>Números nas Estrelas</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2024-07-23"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 14 ou superior</p>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=com.IFBAIANO.NUMEROSNASESTRELAS&pcampaignid=web_share"><img src="logos/googleplay.png"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/gm.png" alt="GamaMath">
+            <h3>GamaMath</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2017-03-10"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 8.1 ou superior</p>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=com.GamaCompany.GamaMath&pcampaignid=web_share"><img src="logos/googleplay.png"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/eg.png" alt="Elementos Geométricos">
+            <h3>Elementos Geométricos</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2017-03-09"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 8.1 ou superior</p>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=com.IFBAIANO.ElementosGeometricosria&pcampaignid=web_share"><img src="logos/googleplay.png"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/ov.jpg" alt="Oxe e as Vogais">
+            <h3>Oxe e as Vogais</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2017-03-09"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 8.1 ou superior</p>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=com.IFBAIANO.OXE&pcampaignid=web_share"><img src="logos/googleplay.png"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/fo.webp" alt="Funções Orgânicas">
+            <h3>Funções Orgânicas</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2018-08-22"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 9 ou superior</p>
+            <br>
+            <a href="https://apkcombo.com/d?u=aHR0cHM6Ly9kLTAyLndpbnVkZi5jb20vYi9hcGsvWTI5dExrbEdRa0ZKUVU1UExrWjFibU52WlhOUGNtZGhibWxqWVhOZk0xODNNREkzTjJRd053P2s9MjkyNjQwNDc2NzE3NjYxMmEwOGY4MGQ3ZTg4MmVmODQ2NzZjNjkzNyZfZm49Um5WdUpVTXpKVUUzSlVNekpVSTFaWE1yVDNKbkpVTXpKVUV5Ym1sallYTmZNeTR3WDJGd2EyTnZiV0p2TG1OdmJTNWhjR3MlM0Q=&fp=eff401b4bfece0e3d15abe6c9b7e6da6&ip=187.111.132.219"><img src="logos/download.png" alt="download"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/gg.webp" alt="Aprendendo Letras e Números">
+            <h3>Aprendendo Letras e Números</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2019-11-07"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 10 ou superior</p>
+            <br>
+            <a href="https://download.apkcombo.com/com.Gama.AprendendoLetras_e_Numeros/Aprendendo%20Letras%20e%20N%C3%BAmeros_1.1_apkcombo.com.apk?ecp=Y29tLkdhbWEuQXByZW5kZW5kb0xldHJhc19lX051bWVyb3MvMS4xLzIwMDAwMi4wODBkNTA3ZWU3MmI3YjNhYTcxZGRkMTYyY2E0OGY5YzNkMzVkNmE1LmFwaw==&iat=1734985635&sig=6adff0c33b15c6627d3ee38833c37944&size=18585698&from=cf&version=latest&lang=pt&fp=eff401b4bfece0e3d15abe6c9b7e6da6&ip=187.111.132.219"><img src="logos/download.png" alt="download"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/tb.webp" alt="To Be or Not To Be">
+            <h3>To Be or Not To Be</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2018-09-29"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 9 ou superior</p>
+            <br>
+            <a href="https://apkcombo.com/d?u=aHR0cHM6Ly9kLTA3LndpbnVkZi5jb20vYi9hcGsvWTI5dExrcHViaTVVYjBKbFpWOHhYekV3T0RZME5qSXk/az04MTY0NmE0ZTNmMGMwYzc2OTAxZGJiY2EwYTA1OGRmZDY3NmM2YjMxJl9mbj1WRzhyUW1VcmIzSXJUbTkwSzFSdkswSmxYekV1TUY5aGNHdGpiMjFpYnk1amIyMHVZWEJy&fp=eff401b4bfece0e3d15abe6c9b7e6da6&ip=187.111.132.219"><img src="logos/download.png" alt="download"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/qm.webp" alt="Quiz Math">
+            <h3>Quiz Math</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2017-09-10"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 8 ou superior</p>
+            <br>
+            <a href="https://apkcombo.com/d?u=aHR0cHM6Ly9kLTA3LndpbnVkZi5jb20vYi9hcGsvWTI5dExrRnVaSEpsVW05a2NtbG5kV1Z6TGxGMWFYcE5ZWFJvWHpSZll6STVOakF6TkRjP2s9ZWI1NDEzZGIzZmFhMWFmZmE5NWMxNDc4ZWFmNmVjMWM2NzZjNmJiYyZfZm49VVhWcGVpdE5ZWFJvWHpRdU1GOWhjR3RqYjIxaWJ5NWpiMjB1WVhCcg==&fp=eff401b4bfece0e3d15abe6c9b7e6da6&ip=187.111.132.219"><img src="logos/download.png" alt="download"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/cm.webp" alt="Informática para Concursos">
+            <h3>Charadas da Matemática</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2023-11-20"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 14 ou superior</p>
+            <br>
+            <a href="https://gcdn.androidcombo.com/com.IFBAIANO.CharadasDaMatematica/Charadas%20da%20Matem%C3%A1tica_1.0_apkcombo.com.apk?ecp=P3Rva2VuPUFPVENtMFI3YlNUWDRLMmZ6d3BfT2lFWWlqNEJ3SEhNQW04Zmstb3B1dDNpNjF6UlY2RXpwdVFfeWZtSFNSUGpERmtnRHlFV3pJam91UUs1bU1YUXY3TEQtZVRiTGNZRFhTY2hMRTRubGdQTVB3QnZ4d1hsdW5ObWV3TjBKTDRQTzZ1OHdfYzhqWTZvNkU1Qm1zaV83RFN4Y0dSZ0FsYkpSVVRqNnpmRlNQWklpb3dqN2lXdmw5WUNvei1QRU9nN01KV3FBeEtRVVYyY0NTdXlJckttQ1Blc05aNENvRnh5WDZpdzFBZjNPRjlhS25yTnFwV2RPSjdSVTY2cjBUVkV2V25ENUwzb1Y3LVFXRnE2TWlzRlJhbWVtUFdMQ1VkQjloRWdxcVFrWURYRWJ6WF9IN1lrczNYc0thdjhmOUN1NHItTW9UOXRjc3k1eTlxUjVTNHZZUmFaVENOTWFkUngzdkVPeWNUN0xVUkJraVoxek9nQ2oxc2xDZE9Md3p4TzBVSnd2ZW1EbU1qeWxZenA1eUQ2eDhNT0RyV1VFSDZxMWVXbk92T2lTZWd0TFEmY3BuPWsyUGZCRFI4c3J5X2psaVg=&iat=1734988806&sig=0a9d7aa98c843f690878b466cfc7bb77&lang=pt&fp=eff401b4bfece0e3d15abe6c9b7e6da6&ip=187.111.132.219"><img src="logos/download.png" alt="download"></a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <section class="trending-product" id="Aplicativos">
+        <div class="center-text">
+            <h2 class="title">Nossos <span>Aplicativos</span> para você</h2>
+            <p>Baixe e aproveite!</p>
+        </div>
+    </section>
+    <div class="game-list">
+        <div class="game-card">
+            <img src="logos/ic.webp" alt="Informática para Concursos">
+            <h3>Informática para Concursos</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2018-03-05"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 9 ou superior</p>
+            <br>
+            <a href="https://apkcombo.com/d?u=aHR0cHM6Ly9kLTEzLndpbnVkZi5jb20vYi9hcGsvWTI5dExrZGhiV0V1U1VOZk1sODRZemhqTmpBMll3P2s9ODgwZGJlYjE3N2Q3MmYxOWZmNmQ3OTJkOGYwMDM0ZjI2NzZjNWZjZiZfZm49U1c1bWIzSnRKVU16SlVFeGRHbGpZU3R3WVhKaEswTnZibU4xY25OdmMxOHlMakJmWVhCclkyOXRZbTh1WTI5dExtRndhdyUzRCUzRA==&fp=eff401b4bfece0e3d15abe6c9b7e6da6&ip=187.111.132.219"><img src="logos/download.png" alt="download"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/ta.webp" alt="Técnico Agrícola IFBAIANO-SBF">
+            <h3>Técnico Agrícola IFBAIANO-SBF</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2023-01-05"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 14 ou superior</p>
+            <br>
+            <a href="https://gcdn.androidcombo.com/com.IFBAIANO.tec_agropecuaria/T%C3%A9cnico%20Agr%C3%ADcola%20IFBAIANO-SBF_1.0_apkcombo.com.apk?ecp=P3Rva2VuPUFPVENtMFJxbVEtblZLZXdFWndqNGE4bl83OUdDMnZTbmZBcDRTSkJpN0JQd3RPeVh1NHRralYzdEhweGFrVHZiUk92b1pySDYybEsxQW9sbTd6RjVxcHJDejRmNDFhQ3lBUV9SdE9WQkk2b3BmWVAtOFoyZnAtbmxLT1BvNjdpZnU5clAzODcyMkVTazR4S0FnZ08zMHVYUHpQaTZ5Zjl5Wmx4bU0yeHNPbHhIdXpuc0I4OUFIdWtTbmlJUDRqSWNDRGZoR0w3UkpKSXhCLW5sYm9lakc1cl9XaERhZ0dBZ3JEQk5Qell3ZHF0WjlJN2N4M01xOFQ2ajVpRmtZTVcwMGJoVFRJSFBXalBhUGV6bEhZNk1lZTZET085ZEhKNzB2bUtMSzVGdTZmc2QtaUcxTG9QdXNyVHROUHAzSXRlcE1tLTZKbXYycnlySlpiWjhqOWF0aC1uanlReThOQzBiWFNxaUE3NnJUYnVtWEVEbURjcjhKUDNnRHdtOVVjV1pUYVRxX092LVMxVzh4Rm9xNTdHcm9OVERuS04xM29yYTctdHZVVSZjcG49a3pMQmN6VmNqTXg2MHdRTA==&iat=1734989209&sig=6cc6ed8d63d7e8b11831b01d1ac22cee&lang=pt&fp=eff401b4bfece0e3d15abe6c9b7e6da6&ip=187.111.132.219"><img src="logos/download.png" alt="download"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/if.webp" alt="Campus IFBAIANO">
+            <h3>Campus IFBAIANO</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2020-10-14"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 11 ou superior</p>
+            <br>
+            <a href="https://download.apkcombo.com/com.IFBAIANO.CAMPUSIFBAIANO/Campus%20IFBAIANO_1.0_apkcombo.com.apk?ecp=Y29tLklGQkFJQU5PLkNBTVBVU0lGQkFJQU5PLzEuMC8xLjQxMTZlNDlkYjk4M2VkYjdiOTBlN2Y3OGVlYmEwNThlODk0N2JhNzAuYXBr&iat=1734989543&sig=641b539e11295f93e5c4cd0de02ab021&size=20453252&from=cf&version=latest&lang=pt&fp=eff401b4bfece0e3d15abe6c9b7e6da6&ip=187.111.132.219"><img src="logos/download.png" alt="download"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/br.webp" alt="Brasil: UF e Bandeiras">
+            <h3>Brasil: UF e Bandeiras</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2017-08-13"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 8.1 ou superior</p>
+            <br>
+            <a href="https://apkcombo.com/d?u=aHR0cHM6Ly9kLTMyLndpbnVkZi5jb20vYi9hcGsvWTI5dExrTmxiR2t1UW5KaGMybHNYekZmTldFME5qSmxNZz9rPTdiNzYyNjFjMjA2ZGZiMmQ3ZDJiMGM0MTc5YzViMDI4Njc2YzdhMzAmX2ZuPVFuSmhjMmxzSlROQksxVkdLMlVyUW1GdVpHVnBjbUZ6WHpFdU1GOWhjR3RqYjIxaWJ5NWpiMjB1WVhCcg==&fp=eff401b4bfece0e3d15abe6c9b7e6da6&ip=187.111.132.219"><img src="logos/download.png" alt="download"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/ti.webp" alt="Técnico Informática IFBAIANO">
+            <h3>Técnico Informática IFBAIANO</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2017-03-07"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 8.1 ou superior</p>
+            <br>
+            <a href="https://gcdn.androidcombo.com/com.IFBaiano.Tecnoinf/T%C3%A9cnico%20Inform%C3%A1tica%20IFBAIANO_1.0_apkcombo.com.apk?ecp=P3Rva2VuPUFPVENtMFR5b0xUWGN4dmw2UktGaVZsTFM1M3hpZThNT3phOGlodG5Kc05MdGFjeHEzV3l1Nm5DaE1jY0FKWUNna1BmbnZnbFlad0NPeWFQU0xYS2kySlZVN3FYMFF1OVVWVk5DQVktdzhGSUlIaGNFdEk4eXlyVG9MZURlTnVfcG9FMXhKU2ppcDlENlR6dzZRa2c0Ml94dkdhVHJYc29WdXFjbjJ6M2s1c3VjMHVfVUpsUTlqVGY3dUVTTjNkVmRYZzF1LUpyRjlobnpPMC05d01pSjFrZG8ycUlXZkFRLVY0bzFscmdLOFI0aEhlQlcxbXBXWUFPa2QybkEtbTcxc0kxc1lkOUF4VVEybGFYQVMwRXR5b0paQk1QOXB6VmdpbUFHcmVNci1KMFI5VlI5M3R4RmVfMkhURU91dk1nR0M3V09GN1B0UGtxa04yam5oVTU4OVQwdWx3bVNHVE5PMG9yJmNwbj1aTGtibmtvVUhxOEVNa2o1&iat=1734990934&sig=0ea5423ac207cdbe7c9a6ae884e7d484&lang=pt&fp=eff401b4bfece0e3d15abe6c9b7e6da6&ip=187.111.132.219"><img src="logos/download.png" alt="download"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/cif.webp" alt="Cursos do IFBAIANO - SBF">
+            <h3>Cursos do IFBAIANO - SBF</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2022-12-28"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 13 ou superior</p>
+            <br>
+            <a href="https://gcdn.androidcombo.com/com.IFBAIANO.CURSOS/Cursos%20do%20IFBAIANO%20-%20SBF_1.0_apkcombo.com.apk?ecp=P3Rva2VuPUFPVENtMFRuQkNGVTEyY2hYdjRVVW5CMjNzcW85UGZVamJZenpVTGdmOC0tNXU0RWdzU0NJWGxIMTRIX3FTeDdjOFBrQWhTUzI4azdKbFNfMXJxSkRFamtIaVczMTdRTElXc0FqeUt6Nm93Q0hPSGRtZ3N1Uk5YV2NueG83MUZFcDRwZTc4clVSZkRtWHlpZW9CaUhFdkZhOUQ2TTRjeHgtaGd5WnN5eTQwSDdPak9YVzlaeTJldkotbmVSdjFUT3BQLVRfVzNMSmNzYU1LV2wzcWNpZTZKTDNHZDBIZFVVa0U0eUMxNXlUeE11eGRlTXQ3VTJocm94SEVQTmZ0QmNzNUFOQ3pLTVIyVEcxRWFpU2tkOXBVazlHRTZPMUtVNXVja1NvRWU2UGhDdE4td3hNTENEcW9yU1Z1SkVGQkFlLVlORURRSUY1V3ZsWHJKY0FzWDRjVGV4WkYwWTNKbDZqdzBuTWVZNXF2U21VS1plNmN6WjVEUEZMWUwxTktlVE1OelpnUjNUNDFjUkJGSTlFN2JEdXRxNiZjcG49TFFncms4V0h6ekZYUml3Sw==&iat=1734991298&sig=b8cf4c0491082b878c2a46edc1e7bb17&lang=pt&fp=eff401b4bfece0e3d15abe6c9b7e6da6&ip=187.111.132.219"><img src="logos/download.png" alt="download"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/cqb.webp" alt="Comunidades Quilombolas Bonfim">
+            <h3>Comunidades Quilombolas Bonfim</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2023-11-20"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 14 ou superior</p>
+            <br>
+            <a href="https://gcdn.androidcombo.com/com.IFBAIANOAPPDEV.QuilombolasComunity/Comunidades%20Quilombolas%20Bonfim_1.0_apkcombo.com.apk?ecp=P3Rva2VuPUFPVENtMFJnZDluYmh3Zm95X3FvZUJETGNZS0NpbFdxSlBsUVl4bWc5UXBCZVprMTZYaVF4WmI1Nk5GZkpDcmxxZ0RiWEJJT01xejFWU3JTRkVvRC1FSlRxNndOdDJxaE10dXFIdnNOaUxZRVFFd1dfN2t5TjBoYVdKemJNWF8teGViU2NPZTZ0akJVVDBaakVqSnVLRWwzWF9MRGctZWpnU3VHdXJ0YzZqLW9RdjZrSjJuYUR2bnJqbS1XalRzdWtDRW00a3llM1F6c0EwS1R2YnBRTlFmLWY4azQxcDF6WFRpYUprMUZmWGRsNmt1VWNfbHZ6ZXMxOV9DbWFTa3NJQjNobm0yZ0JUNnFaV2x2Qm15bFN1c0o4Rmc5Y0swenlUMlFGWk9ZdHd0NVlsbzA0dVJ1bVhldzAyWml4U21qNkY1Y1lpT0czTXZWT0g2bjFuWVlFdk1YbHZGc1hBTWF0QVRES3QwdmxXWVdTTFdoeXNYSmt3Nm96REpjNUxFSEV0X0g5OW02WGktWXNrTFVTbFhielBUNUpHYlVfdTZpODU5X3o1bFpRRHRXZU1IQ25RbVdmdyZjcG49NzBmWFVfZDZuWHVVd29nNw==&iat=1734991377&sig=037a17eb77b6511ad758011e8b72c342&lang=pt&fp=eff401b4bfece0e3d15abe6c9b7e6da6&ip=187.111.132.219"><img src="logos/download.png" alt="download"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/icc.webp" alt="Introdução à Computação">
+            <h3>Introdução à Computação</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2023-11-22"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 14 ou superior</p>
+            <br>
+            <a href="https://gcdn.androidcombo.com/com.IFBAIANO.IntroduoaComputao/Introdu%C3%A7%C3%A3o%20%C3%A0%20Computa%C3%A7%C3%A3o_2.0_apkcombo.com.apk?ecp=P3Rva2VuPUFPVENtMFRCcGtCa01CRkNwX1pDTnBHblZmeEFKcDd6QUhfRWpEQ0tyaGM4U2pZNGVlcTJzUDZnVUt6NEJ4WkRpdFNoX2tjMHpoMXpZb1U0RGUxUDhrLUlEQ3FTaGg5YTRtbEVQTFM0ZkpVd0FnTnR5by05X1B1cjVwMWlXT00yOHdYbjVuNVkxMHhIV3gwWGZfNE5tWHRtaUlYMjRxamRlTkE2Yk9KaHp0Z1RhWW9GUWZNbUtWaVExbV9zVDktQkJBMm9iVjIzakZsQThrbE1LZGRFc1VpeW5zTG1naHhuUV8xdzRzZll4SDA1dDlrUFkxYlc1OG9NRzJlLTVXUFFtUS0wT3UzQ1ZQQm9DeGctVTcxRGY3MEdmMW95X1hLMHZyZWphV2Q1a1RVcDNOWE5NQnY0clBsbVd1S2p0bHBlaDFyMG0xUnQyM3pISEE5U1hXZTFFZEhVc0t0S0x1TURDTXMySFJZc0J4QXQwV3IyQTBhVlVLQXlaazFWeHFpRkI0Q0EtSGpCVnJEVXVlZVZkQmN1UkVnVVFxdTFEaTVScGZMNzg5UXJFZyZjcG49bHEwWmRKZHk2OWc5QmtXbw==&iat=1734991518&sig=3e4237b0f0042441900cd60d67b3c31c&lang=pt&fp=eff401b4bfece0e3d15abe6c9b7e6da6&ip=187.111.132.219"><img src="logos/download.png" alt="download"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/tal.webp" alt="Técnico Alimentos IFBAINO-SBF">
+            <h3>Técnico Alimentos IFBAINO-SBF</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2023-01-10"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 14 ou superior</p>
+            <br>
+            <a href="https://gcdn.androidcombo.com/com.YFCompany.TecnicoemAlimentos/T%C3%A9cnico%20Alimentos%20IFBAINO-SBF_1.0_apkcombo.com.apk?ecp=P3Rva2VuPUFPVENtMFNjOHA3WS0yRzVNc1ROcmx4bnBhQUt4akc0SEkyZjZFc1F3T3ktTmtBbVRORzJpZ3RHWUY4YXlqXy1wLVZFU3VfZWU4bkQzVUdJcHlGaTFxTjdld0luazBOektKNlhreXBwUWt1YUFVajdHOWc3NHU5V2UxV1hfSHU4M2VXOVdUNHFWbGRlbG1aNmNvbXVIaEFyN2lKMkVZTnBGNzFtRElwVlBNd0N6aUVhU0ZnZFVRT1pwX2hsaTk2aU9kVGpyd3liblVrcWg3SnNqMG01ZFFOMXcwUUEwLUJyTXVMNDE4TU5nV2pidEROUUY5X19vb2FXVDc5RXFqdWx1YmxRWlR5Wm5jYURvSnUtN1BxQk5YdUdkZFM2UW9NeUhUVnJPMjlXeWhPb2dqblpRcEtPRkVfS3ZuX2Q3eWxhUFhOMHV6eXpFR0RCQ1BqS0pSQ3dJYzYyN0tyVldwU2Z2QTBZOTUzenFTc1VST2ppUUNTVTdUdU5GVHhwb3BTUjNTOWNoaUVldkZReENiMmkzeno1WHRWNmFmb0RqZjViQ0xVNk9ZYzdCSHcwJmNwbj0wMEVReV9hakFrbl95V29S&iat=1734991656&sig=d153f5a0f6a43ed2aa5d10b48dad63af&lang=pt&fp=eff401b4bfece0e3d15abe6c9b7e6da6&ip=187.111.132.219"><img src="logos/download.png" alt="download"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/lic.webp" alt="Lic. em Computação IFBAIANO">
+            <h3>Lic. em Computação IFBAIANO</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2022-12-22"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 13 ou superior</p>
+            <br>
+            <a href="https://gcdn.androidcombo.com/com.IFBAIANOSBF2022.appLcc2022/Lic.%20em%20Computa%C3%A7%C3%A3o%20IFBAIANO_2.0_apkcombo.com.apk?ecp=P3Rva2VuPUFPVENtMFNvcEZ5cE5zWVB5cWxUX3piU1g5YVBTMXRpSlhlVDgyX0ozZmtKdDZ5VExEV2plX2ZqQl9CeHFFZWlhQXRrYVJ0Z29PN2lPOThiM3J0MGczeW1xVXluVnZ1UnpEcm5PUFE5OEprM1JGOUEzc1o5ek5RaHBPU2s4LV9hZ1UwU2swZnFDcHdOcF82aDdmaWJuV1pySmFCemh6blZlUExHby1XOE9XN0JvM2NSTEUxRmFIU1FfR1pLZGtlMXc2Rk4zTnN5TkNOZ1VBcGo5a2lhbVJTQmhNeTB1eXlsMTNKN1QyN0hWWlFVcTNLZC1LcHFjZXhiTW9aODA3NjAwVndiWVM5YURfTjBJZmh0YWZ5bFJwdWN1c3IwX2g3QmJKRHhfcExwTzVTN1VPaGVQNTVVS285c3F2VTN3ZWg1LVZtWkJEMDZMYnk5a1hycDdzN2I1bnY3MFU2S3l0aTE2YVFKdGFmZjRfX0NyenF0WV9FblFZbmtnaG95QW9lWkhkdmJ4WUNQR2dIenpGd0ZkZUVGTlNJMGxrMmpOeGlEYlVCdEUyNmpCQSZjcG49aEk3TldtYUFyZjB1LXlCMg==&iat=1734991781&sig=0cb2a9086a187f492150d34f77c98d3c&lang=pt&fp=eff401b4bfece0e3d15abe6c9b7e6da6&ip=187.111.132.219"><img src="logos/download.png" alt="download"></a>
+        </div>
+    </div>
+
+
+
+
+
+
+    <section class="contact">
+        <div class="contact-info">
+            <div class="first-info">
+                <img src="logos/logo.png" alt="" />
+                <p>
+                    Estrada da Igara, s/n - Zona Rural<br />Senhor do Bonfim - Bahia
+                </p>
+                <p>48970-000</p>
+                <p>gejifbaiano@gmail.com</p>
+                <div class="social-icon">
+                    <a href="https://www.instagram.com/gejif_ifbaiano/"><i class="bx bxl-instagram"></i
+            ></a>
+                </div>
+            </div>
+            <div class="second-info">
+                <h4>Coordenado por:</h4>
+                <p>Dr. Jesse Nery Filho <a href="https://www.instagram.com/neryfilhoj/"><i class="bx bxl-instagram"></i></a></p>
+            </div>
+            <div class="second-info">
+                <h4>Equipe:</h4>
+                <p>Bruna Azevedo <a href="https://www.instagram.com/bruna.a.reis/"><i class="bx bxl-instagram"></i></a></p>
+                <p>Cauã Lima
+                    <a href="https://www.instagram.com//"></a>
+                </p>
+                <p>Diego Pereira <a href="https://www.instagram.com/diego_pereira.s/"><i class="bx bxl-instagram"></i></a></p>
+                <p>Guilherme Ribeiro <a href="https://www.instagram.com/gui_tellez/"><i class="bx bxl-instagram"></i></a></p>
+                <p>Jesse Nery <a href="https://www.instagram.com/neryfilhoj/"><i class="bx bxl-instagram"></i></a></p>
+                <p>Joneffe Silva <a href="https://www.instagram.com/jhonn_ydev/"><i class="bx bxl-instagram"></i></a></p>
+                <p>João Paulo <a href="https://www.instagram.com/joaopaulo__ms/"><i class="bx bxl-instagram"></i></a></p>
+                <p>Joel Júnior <a href="https://www.instagram.com/eijoeljunior/"><i class="bx bxl-instagram"></i></a></p>
+                <p>Lucas Silva <a href="https://www.instagram.com/_lucassil02/"><i class="bx bxl-instagram"></i></a></p>
+                <p>Mario Júnior <a href="https://www.instagram.com/mario.f.junior/"><i class="bx bxl-instagram"></i></a></p>
+                <p>Matheus Castro <a href="https://www.instagram.com/theu.silvac/"><i class="bx bxl-instagram"></i></a></p>
+                <p>Wilton Nascimento
+                    <a href="https://www.instagram.com//"></a>
+                </p>
+
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <button class="close-btn" id="closePopup">X</button>
+        <p>Aplicativo indisponível!</p>
+    </div>
+
+
+    <div class="end-text">
+        <p>© 2024 GEJiF. Desenvolvido por <a href="https://www.instagram.com/eijoeljunior/" target="_blank">Joel Júnior</a>. Todos os direitos reservados.</p>
+    </div>
+
+    <script src="./script.js"></script>
 </body>
+
 </html>
