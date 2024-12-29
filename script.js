@@ -11,6 +11,7 @@ document.querySelector('.search-bar').addEventListener('input', function(event) 
         }
     });
 });
+
 // Função para calcular o tempo desde o lançamento
 function calculateElapsedTime(releaseDate) {
     const release = new Date(releaseDate);
@@ -47,3 +48,74 @@ document.addEventListener("DOMContentLoaded", function() {
         element.textContent = calculateElapsedTime(releaseDate) + " atrás";
     });
 });
+
+// Fogos
+const canvas = document.getElementById('fogosCanvas');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+function estourarFogos() {
+    const particles = [];
+    const colors = ['#FF5733', '#33FF57', '#5733FF', '#FFD700', '#FF69B4'];
+
+    function createParticles(x, y) {
+        for (let i = 0; i < 100; i++) {
+            particles.push({
+                x,
+                y,
+                dx: (Math.random() - 0.5) * 10,
+                dy: (Math.random() - 0.5) * 10,
+                radius: Math.random() * 2 + 1,
+                color: colors[Math.floor(Math.random() * colors.length)],
+                life: 100
+            });
+        }
+    }
+
+    function drawParticles() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach((particle, index) => {
+            ctx.beginPath();
+            ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+            ctx.fillStyle = particle.color;
+            ctx.fill();
+            ctx.closePath();
+
+            particle.x += particle.dx;
+            particle.y += particle.dy;
+            particle.radius *= 0.98;
+            particle.life -= 1;
+
+            if (particle.life <= 0) {
+                particles.splice(index, 1);
+            }
+        });
+    }
+
+    function animate() {
+        drawParticles();
+        if (particles.length > 0) {
+            requestAnimationFrame(animate);
+        }
+    }
+
+    // Criar vários fogos em intervalos
+    const duration = 10000; // Duração total dos fogos em milissegundos
+    const interval = 1000; // Intervalo entre cada explosão
+    let elapsed = 0;
+
+    const intervalId = setInterval(() => {
+        const x = Math.random() * canvas.width;
+        const y = Math.random() * canvas.height / 2;
+        createParticles(x, y);
+        animate();
+
+        elapsed += interval;
+        if (elapsed >= duration) {
+            clearInterval(intervalId);
+        }
+    }, interval);
+}
+
+// Fogos
