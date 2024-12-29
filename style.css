@@ -12,8 +12,17 @@
     font-family: "Jost", sans-serif;
     list-style: none;
     text-decoration: none;
+   }
+html, body {
+    margin: 0;
+    padding: 0;
     width: 100%;
     overflow-x: hidden;
+}
+
+.container {
+    max-width: 100%;
+    overflow: hidden;
 }
 
 h4 {
