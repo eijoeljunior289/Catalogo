@@ -86,6 +86,40 @@ canvas {
 }
 
 
+/* Estilos para o botão de voltar ao topo */
+
+#scrollToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #2f9e41;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: background 0.3s;
+}
+
+#scrollToTop:hover {
+    background: #1e7a32;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
 /* Garantir que o header seja fixo no topo */
 
 header.sticky {
