@@ -23,7 +23,7 @@ body {
 }
 /* Reduzindo o tamanho da barra de pesquisa */
 input[type="search"] {
-    width: 200px; /* Ajuste a largura conforme necessário */
+    width: 150px; /* Ajuste a largura conforme necessário */
     height: 30px; /* Ajuste a altura conforme necessário */
     font-size: 14px; /* Tamanho da fonte */
     padding: 5px; /* Espaçamento interno */
