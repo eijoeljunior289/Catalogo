@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="logos/logo.png" type="image/x-icon" />
     <title>GEJiF</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
@@ -20,6 +20,7 @@
 
 <body>
     <header class="sticky">
+
         <a href="#" class="logo"><img src="logos/logo.png" alt="Logo GEJiF" style="height: 50px;" /></a>
         <h3>JOGOS IF BAIANO</h3>
         <ul class="navmenu">
@@ -30,10 +31,21 @@
         </ul>
         <div class="nav-icon">
 
-
             <input type="text" placeholder="Pesquisar um jogo" class="search-bar">
         </div>
     </header>
+
+    <!-- Seção Comemorativa de Ano Novo -->
+    <section class="ano-novo" id="ano-novo">
+        <div class="ano-novo-container">
+            <h1 class="ano-novo-mensagem">Feliz Ano Novo 2025! 🎉</h1>
+            <p class="ano-novo-detalhes">Que este novo ano seja repleto de jogos incríveis e muita diversão! 🕹️✨</p>
+            <button class="ano-novo-botao" onclick="estourarFogos()">Estourar Fogos!</button>
+            <canvas id="fogosCanvas"></canvas>
+        </div>
+    </section>
+    <!-- Seção Comemorativa de Ano Novo -->
+
 
     <section class="main-home box-height" id="home-up">
         <div class="main-text">
@@ -463,6 +475,12 @@
 
         </div>
     </section>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <button class="close-btn" id="closePopup">X</button>
+        <p>Aplicativo indisponível!</p>
+    </div>
 
 
     <div class="end-text">
