@@ -12,8 +12,10 @@
     font-family: "Jost", sans-serif;
     list-style: none;
     text-decoration: none;
-   }
-html, body {
+}
+
+html,
+body {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -94,6 +96,51 @@ canvas {
     to {
         opacity: 1;
     }
+}
+
+.menu {
+    position: relative;
+}
+
+.menu-toggle {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.menu-options {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    width: 200px;
+}
+
+.menu-options li {
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-options li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+}
+
+.menu-options li a:hover {
+    background-color: #f4f4f4;
+}
+
+.menu.show .menu-options {
+    display: block;
 }
 
 
