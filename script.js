@@ -135,3 +135,9 @@ scrollToTopButton.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 // Script para o botão de voltar ao topo
+
+
+
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+    document.querySelector('.menu').classList.toggle('show');
+});
