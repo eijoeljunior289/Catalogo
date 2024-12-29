@@ -21,6 +21,14 @@ body {
     width: 100%;
     overflow-x: hidden;
 }
+/* Reduzindo o tamanho da barra de pesquisa */
+input[type="search"] {
+    width: 200px; /* Ajuste a largura conforme necessário */
+    height: 30px; /* Ajuste a altura conforme necessário */
+    font-size: 14px; /* Tamanho da fonte */
+    padding: 5px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas, se desejado */
+}
 
 .container {
     max-width: 100%;
