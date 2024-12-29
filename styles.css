@@ -27,6 +27,143 @@ section {
 /* the end - geral */
 
 
+/* fogos */
+
+.ano-novo {
+    text-align: center;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    padding: 50px 20px;
+    position: relative;
+}
+
+.ano-novo-container {
+    position: relative;
+    z-index: 2;
+}
+
+.ano-novo-mensagem {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.ano-novo-detalhes {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.ano-novo-botao {
+    background: #ffd700;
+    color: #000;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.ano-novo-botao:hover {
+    background: #ffa500;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Garantir que o header seja fixo no topo */
+
+header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    /* Ajuste conforme a altura real do header */
+    background-color: #32a852;
+    /* Verde (ajuste a cor se necessário) */
+    z-index: 1000;
+    /* Para garantir que esteja acima de outros elementos */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra para destaque */
+}
+
+
+/* Espaçamento entre o header e a seção azul */
+
+section#ano-novo {
+    margin-top: 60px;
+    /* Adiciona espaço abaixo do header */
+    background-color: #003366;
+    /* Azul escuro (ajuste conforme necessário) */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.ano-novo-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.ano-novo-mensagem {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.ano-novo-detalhes {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.ano-novo-botao {
+    background-color: #ffa500;
+    /* Laranja */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.ano-novo-botao:hover {
+    background-color: #ff8c00;
+    /* Cor mais escura no hover */
+}
+
+
+/* Ajustar as seções seguintes */
+
+section.main-home {
+    margin-top: 20px;
+    /* Ajuste conforme necessário */
+}
+
+
+/* fogos */
+
+
 /* start - componentes */
 
 .title {
