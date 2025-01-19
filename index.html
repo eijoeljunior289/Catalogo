@@ -22,26 +22,29 @@
 <body>
     <header class="sticky">
 
-        <a href="#" class="logo"><img src="logos/logo.png" alt="Logo GEJiF" style="height: 50px;" /></a>
-        <h3>GEJiF</h3>
+        <a href="#" class="logo">
+            <img src="logos/logo.png" alt="Logo GEJiF" style="height: 50px;" />
+        </a>
+        <h3>GEJIF</h3>
         <div class="nav-icon">
-
-            <input type="text" placeholder="Buscar" class="search-bar">
+            <button class="search-toggle" id="searchToggle">🔍</button>
+            <input type="text" placeholder="Buscar" class="search-bar" id="searchBar" style="display: none;">
         </div>
-
 
         <div class="menu">
             <button class="menu-toggle">☰</button>
             <ul class="menu-options">
-                <li> <a href="#Jogos">Jogos</a></li>
-                <li> <a href="#Aplicativos">Aplicativos</a></li>
-                <li> <a href="#Lancamentos">Lançamentos</a></li>
+                <li><a href="#Jogos">Jogos</a></li>
+                <li><a href="#Aplicativos">Aplicativos</a></li>
+                <li><a href="#Lancamentos">Lançamentos</a></li>
             </ul>
         </div>
-
     </header>
+    
 
-    <!-- Seção Comemorativa de Ano Novo -->
+    <!--------------------------------------------------------------------------------------->
+
+    <!-- Seção Comemorativa de Ano Novo
     <section class="ano-novo" id="ano-novo">
         <div class="ano-novo-container">
             <h1 class="ano-novo-mensagem">Feliz Ano Novo! </br>Olá, 2025! 🎉</h1>
@@ -50,9 +53,17 @@
             <canvas id="fogosCanvas"></canvas>
         </div>
     </section>
-    <!-- Seção Comemorativa de Ano Novo -->
+     Seção Comemorativa de Ano Novo -->
+
+     <!-- BOTÃO VOLTAR AO TOPO -->
+
     <button id="scrollToTop" title="Voltar ao topo">⬆</button>
 
+    <!-- FIM BOTÃO VOLTAR AO TOPO -->
+
+    <!--------------------------------------------------------------------------------------->
+
+    <!-- BANNER -->
 
     <section class="main-home box-height" id="home-up">
         <div class="main-text">
@@ -66,16 +77,11 @@
         </div>
     </section>
 
+    <!-- FIM BANNER -->
 
+    <!--------------------------------------------------------------------------------------->
 
-
-
-
-
-
-
-
-
+    <!-- LANÇAMENTO 2024 -->
 
     <section id="Lancamentos" class="section-p1">
         <div id="link" class="center-text">
@@ -83,7 +89,97 @@
             <p>Baixe e aproveite!</p>
         </div>
     </section>
+    <!-- NOVOS -->
     <div class="game-list">
+        <div class="game-card">
+            <img src="logos/fm.webp" alt="Fuga de Marte">
+            <h3>Fuga de Marte</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2024-12-13"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 15 ou superior</p>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=com.JEGIF.FugaDeMarteIntroduoAAlgoritmos&pcampaignid=web_share"><img src="logos/googleplay.png" alt="Google Play Store"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/eq.webp" alt="EditQuiz">
+            <h3>EditQuiz</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2024-12-13"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 15 ou superior</p>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=com.DefaultCompany.EditQuiz&pcampaignid=web_share"><img src="logos/googleplay.png" alt="Google Play Store"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/cdc.webp" alt="Código de Defesa do Consumidor">
+            <h3>Código de Defesa do Consumidor</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2024-12-12"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 15 ou superior</p>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=com.IfbaianoAppDev.CdigodeDefesadoConsumidor&pcampaignid=web_share"><img src="logos/googleplay.png" alt="Google Play Store"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/j.webp" alt="Jararavras">
+            <h3>Jararavras</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2024-12-13"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 15 ou superior</p>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=com.DefaultCompany.jararavratest&pcampaignid=web_share"><img src="logos/googleplay.png" alt="Google Play Store"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/ss.webp" alt="Script Saga">
+            <h3>Script Saga</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2024-12-16"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 15 ou superior</p>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=com.IFBAIANO.SCRIPTSAGA&pcampaignid=web_share"><img src="logos/googleplay.png" alt="Google Play Store"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/tl.webp" alt="Tabuleiro Lógico">
+            <h3>Tabuleiro Lógico</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2024-12-20"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 15 ou superior</p>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=com.IFBAIANO.TabuleiroLogico&pcampaignid=web_share"><img src="logos/googleplay.png" alt="Google Play Store"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/it.webp" alt="InterageTEA">
+            <h3>InterageTEA</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2024-12-13"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 15 ou superior</p>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=com.IFBaiano.InterageTEA&pcampaignid=web_share"><img src="logos/googleplay.png" alt="Google Play Store"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/pp.webp" alt="Peça por Peça">
+            <h3>Peça por Peça</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2024-12-16"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 15 ou superior</p>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=com.IFBAIANO.PECAPORPECA&pcampaignid=web_share"><img src="logos/googleplay.png" alt="Google Play Store"></a>
+        </div>
+        <!-- FIM NOVOS -->
         <div class="game-card">
             <img src="logos/dg.jpg" alt="Dalton's Game">
             <h3>Dalton's Game</h3>
@@ -91,7 +187,7 @@
             <p>Grátis</p>
             <p>há <span class="release-time" data-release="2024-08-07"></span></p>
             <h5>Requisitos mínimos:</h5>
-            <p>Android 12 ou superior</p>
+            <p>Android 14 ou superior</p>
             <br>
             <a href="https://play.google.com/store/apps/details?id=com.Shooter.DaltonsGame&pcampaignid=web_share"><img src="logos/googleplay.png" alt="Google Play Store"></a>
         </div>
@@ -143,25 +239,87 @@
             <br>
             <a href="https://play.google.com/store/apps/details?id=com.IFBAIANO.NUMEROSNASESTRELAS&pcampaignid=web_share"><img src="logos/googleplay.png"></a>
         </div>
-
     </div>
 
+    <!-- FIM LANÇAMENTO 2024 -->
 
+    <!--------------------------------------------------------------------------------------->
 
-
-
-
-
-
-
+    <!-- JOGOS -->
 
     <section class="trending-product" id="Jogos">
         <div class="center-text">
             <h2 class="title">Nossos <span>Jogos</span> para você</h2>
             <p>Baixe e aproveite!</p>
         </div>
-    </section>
+    </section>       
     <div class="game-list">
+        <div class="game-card">
+            <img src="logos/fm.webp" alt="Fuga de Marte">
+            <h3>Fuga de Marte</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2024-12-13"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 15 ou superior</p>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=com.JEGIF.FugaDeMarteIntroduoAAlgoritmos&pcampaignid=web_share"><img src="logos/googleplay.png" alt="Google Play Store"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/j.webp" alt="Jararavras">
+            <h3>Jararavras</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2024-12-13"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 15 ou superior</p>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=com.DefaultCompany.jararavratest&pcampaignid=web_share"><img src="logos/googleplay.png" alt="Google Play Store"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/ss.webp" alt="Script Saga">
+            <h3>Script Saga</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2024-12-16"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 15 ou superior</p>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=com.IFBAIANO.SCRIPTSAGA&pcampaignid=web_share"><img src="logos/googleplay.png" alt="Google Play Store"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/tl.webp" alt="Tabuleiro Lógico">
+            <h3>Tabuleiro Lógico</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2024-12-20"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 15 ou superior</p>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=com.IFBAIANO.TabuleiroLogico&pcampaignid=web_share"><img src="logos/googleplay.png" alt="Google Play Store"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/it.webp" alt="InterageTEA">
+            <h3>InterageTEA</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2024-12-13"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 15 ou superior</p>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=com.IFBaiano.InterageTEA&pcampaignid=web_share"><img src="logos/googleplay.png" alt="Google Play Store"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/pp.webp" alt="Peça por Peça">
+            <h3>Peça por Peça</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2024-12-16"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 15 ou superior</p>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=com.IFBAIANO.PECAPORPECA&pcampaignid=web_share"><img src="logos/googleplay.png" alt="Google Play Store"></a>
+        </div>
         <div class="game-card">
             <img src="logos/dg.jpg" alt="Dalton's Game">
             <h3>Dalton's Game</h3>
@@ -307,13 +465,11 @@
         </div>
     </div>
 
+    <!-- FIM JOGOS -->
 
+    <!--------------------------------------------------------------------------------------->
 
-
-
-
-
-
+    <!-- APLICATIVOS -->
 
     <section class="trending-product" id="Aplicativos">
         <div class="center-text">
@@ -322,6 +478,30 @@
         </div>
     </section>
     <div class="game-list">
+        <!-- NOVOS -->
+        <div class="game-card">
+            <img src="logos/eq.webp" alt="EditQuiz">
+            <h3>EditQuiz</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2024-12-13"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 15 ou superior</p>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=com.DefaultCompany.EditQuiz&pcampaignid=web_share"><img src="logos/googleplay.png" alt="Google Play Store"></a>
+        </div>
+        <div class="game-card">
+            <img src="logos/cdc.webp" alt="Código de Defesa do Consumidor">
+            <h3>Código de Defesa do Consumidor</h3>
+            <p>Educativo</p>
+            <p>Grátis</p>
+            <p>há <span class="release-time" data-release="2024-12-12"></span></p>
+            <h5>Requisitos mínimos:</h5>
+            <p>Android 15 ou superior</p>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=com.IfbaianoAppDev.CdigodeDefesadoConsumidor&pcampaignid=web_share"><img src="logos/googleplay.png" alt="Google Play Store"></a>
+        </div>
+        <!-- FIM NOVOS -->
         <div class="game-card">
             <img src="logos/ic.webp" alt="Informática para Concursos">
             <h3>Informática para Concursos</h3>
@@ -434,13 +614,14 @@
         </div>
     </div>
 
+    <!-- FIM APLICATIVOS -->
 
+    <!--------------------------------------------------------------------------------------->
 
-
-
-
+    <!-- SOBRE -->
     <section class="contact">
         <div class="contact-info">
+            <!-- ENDEREÇO -->
             <div class="first-info">
                 <img src="logos/logo.png" alt="" />
                 <p>
@@ -453,6 +634,10 @@
             ></a>
                 </div>
             </div>
+            <!-- FIM ENDEREÇO -->
+
+            <!--------------------------------------------------------------------------------------->
+            <!-- COORDENAÇÃO E EQUIPE -->
             <div class="second-info">
                 <h4>Coordenado por:</h4>
                 <p>Dr. Jesse Nery Filho <a href="https://www.instagram.com/neryfilhoj/"><i class="bx bxl-instagram"></i></a></p>
@@ -475,22 +660,20 @@
                 <p>Wilton Nascimento
                     <a href="https://www.instagram.com//"></a>
                 </p>
-
             </div>
-
-
-
+            <!-- FIM COORDENAÇÃO E EQUIPE -->
         </div>
     </section>
+    <!-- FIM SOBRE -->
 
+    <!--------------------------------------------------------------------------------------->
 
-
-
+    <!-- FOOTER -->
     <div class="end-text">
         <p>© 2024 GEJiF. Desenvolvido por <a href="https://www.instagram.com/eijoeljunior/" target="_blank">Joel Júnior</a>. Todos os direitos reservados.</p>
     </div>
+    <!-- FIM FOOTER -->
 
     <script src="./script.js"></script>
 </body>
-
 </html>
