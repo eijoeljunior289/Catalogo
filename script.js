@@ -11,7 +11,7 @@ window.games = [
     },
     {
         id: 2,
-        title: 'Jararavras - em manuntenção',
+        title: 'Jararavras - em manutenção',
         category: 'jogos',
         image: 'logos/j.webp',
         androidVersion: '15 ou superior',
@@ -51,7 +51,7 @@ window.games = [
     },
     {
         id: 7,
-        title: 'MathAttack - em manuntenção',
+        title: 'MathAttack - em manutenção',
         category: 'jogos',
         image: 'logos/ma.webp',
         androidVersion: '15 ou superior',
@@ -99,7 +99,7 @@ window.games = [
     },
     {
         id: 13,
-        title: 'GamaMath - em manuntenção',
+        title: 'GamaMath - em manutenção',
         category: 'jogos',
         image: 'logos/gm.png',
         androidVersion: '8.1 ou superior',
@@ -123,7 +123,7 @@ window.games = [
     },
     {
         id: 16,
-        title: 'Charadas da Matemática - em manuntenção',
+        title: 'Charadas da Matemática - em manutenção',
         category: 'jogos',
         image: 'logos/cm.webp',
         androidVersion: '14 ou superior',
@@ -149,7 +149,7 @@ window.games = [
     },
     {
         id: 19,
-        title: 'Informática para Concursos - em manuntenção',
+        title: 'Informática para Concursos - em manutenção',
         category: 'apps',
         image: 'logos/ic.webp',
         androidVersion: '9 ou superior',
@@ -164,7 +164,7 @@ window.games = [
         link: 'https://play.google.com/store/apps/details?id=com.IFBAIANO.tec_agropecuaria&pcampaignid=web_share'
     },
     {
-        id: 20,
+        id: 21,
         title: 'Tec. Agrimensura IFBAIANO-SBF',
         category: 'apps',
         image: 'logos/ag.webp',
@@ -172,23 +172,23 @@ window.games = [
         link: 'https://play.google.com/store/apps/details?id=com.Biozard.CursoTecnicoemAgrimensura&pcampaignid=web_share'
     },
     {
-        id: 21,
-        title: 'Campus IFBAIANO - em manuntenção',
+        id: 22,
+        title: 'Campus IFBAIANO - em manutenção',
         category: 'apps',
         image: 'logos/if.webp',
         androidVersion: '11 ou superior',
         link: 'https://play.google.com/store/apps/developer?id=GRUPO+DE+ESTUDO+DE+JOGOS+DO+IFBAIANO'
     },
     {
-        id: 22,
-        title: 'Brasil: UF e Bandeiras - em manuntenção',
+        id: 23,
+        title: 'Brasil: UF e Bandeiras - em manutenção',
         category: 'apps',
         image: 'logos/br.webp',
         androidVersion: '8.1 ou superior',
         link: 'https://play.google.com/store/apps/developer?id=GRUPO+DE+ESTUDO+DE+JOGOS+DO+IFBAIANO'
     },
     {
-        id: 23,
+        id: 24,
         title: 'Técnico Informática IFBAIANO',
         category: 'apps',
         image: 'logos/ti.webp',
@@ -196,7 +196,7 @@ window.games = [
         link: 'https://play.google.com/store/apps/details?id=com.IFBaiano.Tecnoinf&pcampaignid=web_share'
     },
     {
-        id: 24,
+        id: 25,
         title: 'Cursos do IFBAIANO - SBF',
         category: 'apps',
         image: 'logos/cif.webp',
@@ -204,7 +204,7 @@ window.games = [
         link: 'https://play.google.com/store/apps/details?id=com.IFBAIANO.CURSOS&pcampaignid=web_share'
     },
     {
-        id: 25,
+        id: 26,
         title: 'Comunidades Quilombolas Bonfim',
         category: 'apps',
         image: 'logos/cqb.webp',
@@ -212,7 +212,7 @@ window.games = [
         link: 'https://play.google.com/store/apps/details?id=com.IFBAIANOAPPDEV.QuilombolasComunity&pcampaignid=web_share'
     },
     {
-        id: 26,
+        id: 27,
         title: 'Introdução à Computação',
         category: 'apps',
         image: 'logos/icc.webp',
@@ -220,7 +220,7 @@ window.games = [
         link: 'https://play.google.com/store/apps/details?id=com.IFBAIANO.IntroduoaComputao&pcampaignid=web_share'
     },
     {
-        id: 27,
+        id: 28,
         title: 'Técnico Alimentos IFBAINO-SBF',
         category: 'apps',
         image: 'logos/tal.webp',
@@ -228,7 +228,7 @@ window.games = [
         link: 'https://play.google.com/store/apps/details?id=com.YFCompany.TecnicoemAlimentos&pcampaignid=web_share'
     },
     {
-        id: 28,
+        id: 29,
         title: 'Lic. em Computação IFBAIANO',
         category: 'apps',
         image: 'logos/lic.webp',
@@ -237,15 +237,19 @@ window.games = [
     }
 ];
 
-
 // Elementos do DOM
-const gamesGrid = document.querySelector('.games-grid');  // Contêiner onde os jogos serão exibidos
-const filterButtons = document.querySelectorAll('.filter-btn');  // Botões de filtro para as categorias de jogos
-const mobileMenuBtn = document.querySelector('.mobile-menu-btn');  // Botão para abrir o menu em dispositivos móveis
-const menu = document.querySelector('.menu');  // Menu de navegação
+const gamesGrid = document.querySelector('.games-grid');
+const filterButtons = document.querySelectorAll('.filter-btn');
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const menu = document.querySelector('.menu');
 
 // Inicialização da página quando o conteúdo for totalmente carregado
 document.addEventListener('DOMContentLoaded', () => {
+    // ⭐ INICIALIZA OS ÍCONES DO LUCIDE
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+    
     // Exibe todos os jogos inicialmente
     displayGames('all');
     
@@ -255,22 +259,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Função para exibir os jogos com base na categoria selecionada
 function displayGames(category) {
-    // Limpa a grid de jogos
     gamesGrid.innerHTML = '';
     
-    // Filtra os jogos com base na categoria (se for 'all', exibe todos os jogos)
     const filteredGames = category === 'all' 
         ? games 
         : games.filter(game => game.category === category);
     
-    // Cria os cards de jogo e os adiciona à grid
     filteredGames.forEach(game => {
-        // Define um URL de imagem placeholder caso a imagem do jogo não exista
         const imageSrc = game.image || `/placeholder.svg?height=200&width=300`;
         
-        // Cria o card de jogo
         const gameCard = document.createElement('div');
-        gameCard.className = 'game-card';  // Adiciona a classe 'game-card' ao card do jogo
+        gameCard.className = 'game-card';
         gameCard.innerHTML = `
             <img src="${imageSrc}" alt="${game.title}" class="game-image">
             <div class="game-info">
@@ -284,7 +283,6 @@ function displayGames(category) {
             </div>
         `;
         
-        // Adiciona o card à grid de jogos
         gamesGrid.appendChild(gameCard);
     });
 }
@@ -292,16 +290,10 @@ function displayGames(category) {
 // Função para o clique dos botões de filtro
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
-        // Remove a classe 'active' de todos os botões
         filterButtons.forEach(btn => btn.classList.remove('active'));
-        
-        // Adiciona a classe 'active' ao botão clicado
         button.classList.add('active');
         
-        // Pega a categoria associada ao botão (usando o atributo 'data-filter')
         const category = button.getAttribute('data-filter');
-        
-        // Exibe os jogos da categoria selecionada
         displayGames(category);
     });
 });
@@ -309,10 +301,8 @@ filterButtons.forEach(button => {
 // Função para configurar o menu móvel
 function setupMobileMenu() {
     mobileMenuBtn.addEventListener('click', () => {
-        // Alterna a classe 'active' do menu (abre ou fecha o menu)
         menu.classList.toggle('active');
         
-        // Alterna a aparência do botão de menu (transformando em um 'X' quando o menu é aberto)
         const spans = mobileMenuBtn.querySelectorAll('span');
         spans[0].classList.toggle('rotate-45');
         spans[1].classList.toggle('opacity-0');
@@ -323,14 +313,10 @@ function setupMobileMenu() {
 // Função para o botão 'Ver Todos os Jogos'
 const viewAllButton = document.getElementById('view-all-games');
 
-// Adiciona evento de clique ao botão 'Ver Todos os Jogos'
 viewAllButton.addEventListener('click', (event) => {
-    event.preventDefault();  // Previne o comportamento padrão (evitar recarregar a página)
-    
-    // Exibe todos os jogos novamente
+    event.preventDefault();
     displayGames('all');
     
-    // Opcional: Rola para o topo da seção de jogos (para melhorar a experiência)
     window.scrollTo({
         top: document.querySelector('#games').offsetTop,
         behavior: 'smooth'
@@ -340,18 +326,17 @@ viewAllButton.addEventListener('click', (event) => {
 // Função para rolagem suave para links de navegação
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
-        e.preventDefault();  // Previne o comportamento padrão (evitar recarregar a página)
+        e.preventDefault();
         
         const targetId = this.getAttribute('href');
         const targetElement = document.querySelector(targetId);
         
         if (targetElement) {
             window.scrollTo({
-                top: targetElement.offsetTop - 80,  // Rola para o alvo com um pequeno ajuste de distância
+                top: targetElement.offsetTop - 80,
                 behavior: 'smooth'
             });
             
-            // Fecha o menu móvel se estiver aberto
             menu.classList.remove('active');
         }
     });
@@ -365,14 +350,12 @@ const animateOnScroll = () => {
         const elementPosition = element.getBoundingClientRect().top;
         const screenPosition = window.innerHeight / 1.3;
         
-        // Verifica se o elemento está visível na tela
         if (elementPosition < screenPosition) {
             element.classList.add('animate');
         }
     });
 };
 
-// Adiciona evento de scroll na janela para ativar animação
 window.addEventListener('scroll', animateOnScroll);
 
 // Configuração do modal de autenticação
@@ -385,62 +368,56 @@ const registerForm = document.getElementById('register-form');
 const btnEntrar = document.querySelector('.btn-secondary');
 const btnCadastrar = document.querySelector('.btn-primary');
 
-// Função para mostrar o modal de login
-btnEntrar.addEventListener('click', () => {
-    authModal.style.display = 'flex';
-    loginForm.style.display = 'block';
-    registerForm.style.display = 'none';
-});
+// Verifica se os elementos existem antes de adicionar eventos
+if (btnEntrar) {
+    btnEntrar.addEventListener('click', () => {
+        authModal.style.display = 'flex';
+        loginForm.style.display = 'block';
+        registerForm.style.display = 'none';
+    });
+}
 
-// Função para mostrar o modal de cadastro
-btnCadastrar.addEventListener('click', () => {
-    authModal.style.display = 'flex';
-    loginForm.style.display = 'none';
-    registerForm.style.display = 'block';
-});
+if (btnCadastrar) {
+    btnCadastrar.addEventListener('click', () => {
+        authModal.style.display = 'flex';
+        loginForm.style.display = 'none';
+        registerForm.style.display = 'block';
+    });
+}
 
-// Função para fechar o modal de autenticação
-closeModal.addEventListener('click', () => {
-    authModal.style.display = 'none';
-});
+if (closeModal) {
+    closeModal.addEventListener('click', () => {
+        authModal.style.display = 'none';
+    });
+}
 
-// Alternar entre formulários de login e cadastro dentro do modal
-showLoginLink.addEventListener('click', () => {
-    loginForm.style.display = 'block';
-    registerForm.style.display = 'none';
-});
+if (showLoginLink) {
+    showLoginLink.addEventListener('click', () => {
+        loginForm.style.display = 'block';
+        registerForm.style.display = 'none';
+    });
+}
 
-showRegisterLink.addEventListener('click', () => {
-    loginForm.style.display = 'none';
-    registerForm.style.display = 'block';
-});
+if (showRegisterLink) {
+    showRegisterLink.addEventListener('click', () => {
+        loginForm.style.display = 'none';
+        registerForm.style.display = 'block';
+    });
+}
 
-// Fechar o modal se o usuário clicar fora dele
 window.addEventListener('click', (e) => {
     if (e.target === authModal) {
         authModal.style.display = 'none';
     }
 });
 
-// Função para redirecionar diretamente para a página de assinatura quando um botão for clicado
-document.querySelectorAll('.pricing-footer a, .pricing-card > a.btn').forEach(button => {
-    button.addEventListener('click', function(e) {
-        e.preventDefault();  // Previne o comportamento padrão (evitar recarregar a página)
-        window.location.href = this.getAttribute('href');  // Redireciona para o link especificado
-    });
-});
-
-// Função para exibir o modal de cadastro ao clicar no botão de cadastro
 const ctaCadastrar = document.getElementById('cta-cadastrar');
 
-// Adiciona o evento de clique ao botão 'cta-cadastrar'
-ctaCadastrar.addEventListener('click', function(e) {
-    e.preventDefault();  // Evita o comportamento padrão do link
-    
-    // Exibe o modal de autenticação
-    authModal.style.display = 'flex';
-    
-    // Mostra o formulário de cadastro
-    loginForm.style.display = 'none';
-    registerForm.style.display = 'block';
-});
+if (ctaCadastrar) {
+    ctaCadastrar.addEventListener('click', function(e) {
+        e.preventDefault();
+        authModal.style.display = 'flex';
+        loginForm.style.display = 'none';
+        registerForm.style.display = 'block';
+    });
+}
