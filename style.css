@@ -1189,7 +1189,104 @@ span {
 
 
 
+/* AnimaÃ§Ã£o suave na transiÃ§Ã£o dos cards */
+.games-grid,
+.game-card,
+.game-image {
+  transition: all 0.3s ease-in-out;
+}
 
+/* Tablets e telas mÃ©dias */
+@media (max-width: 992px) {
+  .games-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Celulares grandes (iPhone 15, Samsung S23, etc) - 3 itens por linha */
+@media (max-width: 768px) {
+  .games-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .game-card {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  }
+
+  .game-image {
+    height: 150px;
+  }
+
+  .game-info {
+    padding: 12px;
+  }
+
+  .game-title {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+
+  .game-category {
+    font-size: 0.75rem;
+    margin-bottom: 10px;
+  }
+
+  .rent-btn {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Celulares mÃ©dios (390-430px) - 3 itens por linha */
+@media (max-width: 430px) {
+  .games-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .game-image {
+    height: 130px;
+  }
+
+  .game-info {
+    padding: 10px;
+  }
+
+  .game-title {
+    font-size: 0.85rem;
+  }
+}
+
+/* Celulares pequenos (menos de 390px) - 2 itens por linha */
+@media (max-width: 389px) {
+  .games-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .game-image {
+    height: 160px;
+  }
+
+  .game-info {
+    padding: 12px;
+  }
+
+  .game-title {
+    font-size: 0.95rem;
+  }
+
+  .game-category {
+    font-size: 0.8rem;
+  }
+
+  .rent-btn {
+    padding: 7px 12px;
+    font-size: 0.8rem;
+  }
+}
 
 
 
