@@ -1065,24 +1065,84 @@ span {
 }
 
 
-/* Responsividade para telas médias (tablets e smartphones grandes) */
+/* Animação suave na transição dos cards */
+.games-grid,
+.game-card,
+.game-image {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Ajustes de layout responsivo com animação */
 @media (max-width: 992px) {
   .games-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .game-card {
+    transform: scale(0.95);
   }
 }
 
-/* Responsividade para telas pequenas (iPhone, Androids comuns) */
+/* Telas pequenas (iPhones e smartphones médios) */
 @media (max-width: 768px) {
   .games-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .game-card {
+    transform: scale(0.9);
+  }
+
+  .game-image {
+    height: 160px;
+  }
+
+  .game-info {
+    padding: 15px;
+  }
+
+  .game-title {
+    font-size: 1rem;
+  }
+
+  .game-category {
+    font-size: 0.85rem;
+  }
+
+  .rent-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
   }
 }
 
-/* Responsividade para telas muito pequenas */
+/* Telas muito pequenas (celulares compactos) */
 @media (max-width: 480px) {
   .games-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .game-card {
+    transform: scale(0.85);
+  }
+
+  .game-image {
+    height: 140px;
+  }
+
+  .game-info {
+    padding: 10px;
+  }
+
+  .game-title {
+    font-size: 0.9rem;
+  }
+
+  .rent-btn {
+    padding: 5px 10px;
+    font-size: 0.8rem;
   }
 }
 
