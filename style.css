@@ -1065,6 +1065,26 @@ span {
 }
 
 
+/* Responsividade para telas médias (tablets e smartphones grandes) */
+@media (max-width: 992px) {
+  .games-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Responsividade para telas pequenas (iPhone, Androids comuns) */
+@media (max-width: 768px) {
+  .games-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsividade para telas muito pequenas */
+@media (max-width: 480px) {
+  .games-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 
 
