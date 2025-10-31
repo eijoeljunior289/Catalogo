@@ -6,17 +6,17 @@
 }
 
 :root {
-    --primary-color: #ec136e;
-    --primary-light: #ec136e;
-    --primary-dark: #ec136e;
-    --secondary-color: #ec136e;
+    --primary-color: hsl(219, 48%, 52%);
+    --primary-light: #3413ec;
+    --primary-dark: #4b5bec;
+    --secondary-color: #4b5bec;
     --text-color: #1e293b;
     --text-light: #64748b;
     --background: #ffffff;
     --background-alt: #ebf2f8;
     --border-color: #e2e8f0;
     --success-color: #10b981;
-    --error-color: #ef4444;
+    --error-color: #4b5bec;
     --border-radius: 8px;
     --transition: all 0.3s ease;
 }
@@ -94,7 +94,7 @@ img {
 }
 
 .btn-secondary:hover {
-    background-color: #ec136e;
+    background-color: #4b5bec;
 }
 
 .btn-outline {
@@ -207,7 +207,7 @@ nav {
   display: inline-block;
   margin-left: 20px;
   padding: 10px 20px;
-  background-color: #ec136e;
+  background-color: #4b5bec;
   color: #fff;
   border-radius: 6px;
   text-decoration: none;
@@ -215,7 +215,7 @@ nav {
 }
 
 .btn-saiba-mais:hover {
-  background-color: #ec136e;
+  background-color: #4b5bec;
 }
 
 
@@ -687,7 +687,7 @@ footer {
 }
 
 .footer-logo span {
-    color: #ec136e;
+    color: #4b5bec;
 }
 
 .footer-bottom {
@@ -699,7 +699,7 @@ footer {
 }
 
 .social-link {
-    color: #ec136e;
+    color: #4b5bec;
     text-decoration: none;
     font-weight: bold;
 }
@@ -893,14 +893,14 @@ input {
 button {
     padding: 10px;
     border: none;
-    background-color: #ec136e;
+    background-color: #4b5bec;
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #ec136e;
+    background-color: #4b5bec;
 }
 
 /* FormulÃ¡rio de login invisÃ­vel */
@@ -915,7 +915,7 @@ p {
 }
 
 span {
-    color: #ec136e;
+    color: #4b5bec;
     cursor: pointer;
 }
 
@@ -1469,7 +1469,7 @@ span {
 /* FormulÃ¡rios */
 .auth-content h2 {
     margin-bottom: 20px;
-    color: #ec136e;
+    color: #4b5bec;
 }
 
 .auth-content form {
@@ -1498,7 +1498,7 @@ span {
 }
 
 .auth-content span {
-    color: #ec136e;
+    color: #4b5bec;
     cursor: pointer;
     font-weight: 500;
 }
