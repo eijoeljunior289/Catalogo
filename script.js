@@ -11,7 +11,7 @@ window.games = [
     },
     {
         id: 2,
-        title: 'Jararavras - em manutenção',
+        title: 'Jararavras <span><span>- em manutenção </span> </span>',
         category: 'jogos',
         image: 'logos/j.webp',
         androidVersion: '15 ou superior',
@@ -51,7 +51,7 @@ window.games = [
     },
     {
         id: 7,
-        title: 'MathAttack - em manutenção',
+        title: 'MathAttack <span><span>- em manutenção </span> </span>o',
         category: 'jogos',
         image: 'logos/ma.webp',
         androidVersion: '15 ou superior',
@@ -99,7 +99,7 @@ window.games = [
     },
     {
         id: 13,
-        title: 'GamaMath - em manutenção',
+        title: 'GamaMath <span><span>- em manutenção </span> </span>',
         category: 'jogos',
         image: 'logos/gm.png',
         androidVersion: '8.1 ou superior',
@@ -123,7 +123,7 @@ window.games = [
     },
     {
         id: 16,
-        title: 'Charadas da Matemática - em manutenção',
+        title: 'Charadas da Matemática <span>- em manutenção </span>',
         category: 'jogos',
         image: 'logos/cm.webp',
         androidVersion: '14 ou superior',
@@ -149,7 +149,7 @@ window.games = [
     },
     {
         id: 19,
-        title: 'Informática para Concursos - em manutenção',
+        title: 'Informática para Concursos <span>- em manutenção </span>',
         category: 'apps',
         image: 'logos/ic.webp',
         androidVersion: '9 ou superior',
@@ -173,7 +173,7 @@ window.games = [
     },
     {
         id: 22,
-        title: 'Campus IFBAIANO - em manutenção',
+        title: 'Campus IFBAIANO <span>- em manutenção </span>',
         category: 'apps',
         image: 'logos/if.webp',
         androidVersion: '11 ou superior',
@@ -181,7 +181,7 @@ window.games = [
     },
     {
         id: 23,
-        title: 'Brasil: UF e Bandeiras - em manutenção',
+        title: 'Brasil: UF e Bandeiras <span>- em manutenção </span>',
         category: 'apps',
         image: 'logos/br.webp',
         androidVersion: '8.1 ou superior',
