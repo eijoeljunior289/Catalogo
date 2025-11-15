@@ -421,3 +421,29 @@ if (ctaCadastrar) {
         registerForm.style.display = 'block';
     });
 }
+
+
+
+
+
+
+
+// gera flocos de neve dinâmicos (apenas para efeito)
+  (function makeSnow(){
+    const container = document.querySelector('.snow');
+    const count = 36;
+    const w = container.clientWidth || 800;
+    for(let i=0;i<count;i++){
+      const f = document.createElement('div');
+      f.className = 'flake';
+      // posição e variação aleatória
+      f.style.left = Math.random()*100 + '%';
+      f.style.opacity = 0.6 + Math.random()*0.4;
+      f.style.transform = `translateY(-10vh)`;
+      f.style.animationDuration = (6 + Math.random()*9) + 's';
+      f.style.animationDelay = (Math.random()*-10) + 's';
+      f.style.width = f.style.height = (4 + Math.random()*10) + 'px';
+      container.appendChild(f);
+    }
+  })();
+
