@@ -1,4 +1,4 @@
-// Array de jogos (global) com informações sobre cada jogo
+// === BANCO DE DADOS DE JOGOS E APPS ===
 window.games = [
     // 🕹️ JOGOS
     {
@@ -11,7 +11,7 @@ window.games = [
     },
     {
         id: 2,
-        title: 'Jararavras <span><span>- em manutenção </span> </span>',
+        title: 'Jararavras',
         category: 'jogos',
         image: 'logos/j.webp',
         androidVersion: '15 ou superior',
@@ -51,7 +51,7 @@ window.games = [
     },
     {
         id: 7,
-        title: 'MathAttack <span><span>- em manutenção </span> </span>o',
+        title: 'MathAttack',
         category: 'jogos',
         image: 'logos/ma.webp',
         androidVersion: '15 ou superior',
@@ -99,7 +99,7 @@ window.games = [
     },
     {
         id: 13,
-        title: 'GamaMath <span><span>- em manutenção </span> </span>',
+        title: 'GamaMath',
         category: 'jogos',
         image: 'logos/gm.png',
         androidVersion: '8.1 ou superior',
@@ -123,7 +123,7 @@ window.games = [
     },
     {
         id: 16,
-        title: 'Charadas da Matemática <span>- em manutenção </span>',
+        title: 'Charadas da Matemática',
         category: 'jogos',
         image: 'logos/cm.webp',
         androidVersion: '14 ou superior',
@@ -149,7 +149,7 @@ window.games = [
     },
     {
         id: 19,
-        title: 'Informática para Concursos <span>- em manutenção </span>',
+        title: 'Informática para Concursos',
         category: 'apps',
         image: 'logos/ic.webp',
         androidVersion: '9 ou superior',
@@ -157,7 +157,7 @@ window.games = [
     },
     {
         id: 20,
-        title: 'Técnico Agrícola IFBAIANO-SBF',
+        title: 'Técnico Agrícola IFBAIANO',
         category: 'apps',
         image: 'logos/ta.webp',
         androidVersion: '14 ou superior',
@@ -165,7 +165,7 @@ window.games = [
     },
     {
         id: 21,
-        title: 'Tec. Agrimensura IFBAIANO-SBF',
+        title: 'Tec. Agrimensura IFBAIANO',
         category: 'apps',
         image: 'logos/ag.webp',
         androidVersion: '14 ou superior',
@@ -173,7 +173,7 @@ window.games = [
     },
     {
         id: 22,
-        title: 'Campus IFBAIANO <span>- em manutenção </span>',
+        title: 'Campus IFBAIANO',
         category: 'apps',
         image: 'logos/if.webp',
         androidVersion: '11 ou superior',
@@ -181,7 +181,7 @@ window.games = [
     },
     {
         id: 23,
-        title: 'Brasil: UF e Bandeiras <span>- em manutenção </span>',
+        title: 'Brasil: UF e Bandeiras',
         category: 'apps',
         image: 'logos/br.webp',
         androidVersion: '8.1 ou superior',
@@ -197,7 +197,7 @@ window.games = [
     },
     {
         id: 25,
-        title: 'Cursos do IFBAIANO - SBF',
+        title: 'Cursos do IFBAIANO',
         category: 'apps',
         image: 'logos/cif.webp',
         androidVersion: '13 ou superior',
@@ -205,7 +205,7 @@ window.games = [
     },
     {
         id: 26,
-        title: 'Comunidades Quilombolas Bonfim',
+        title: 'Comunidades Quilombolas',
         category: 'apps',
         image: 'logos/cqb.webp',
         androidVersion: '14 ou superior',
@@ -221,7 +221,7 @@ window.games = [
     },
     {
         id: 28,
-        title: 'Técnico Alimentos IFBAINO-SBF',
+        title: 'Técnico Alimentos IFBAIANO',
         category: 'apps',
         image: 'logos/tal.webp',
         androidVersion: '14 ou superior',
@@ -237,213 +237,193 @@ window.games = [
     }
 ];
 
-// Elementos do DOM
+// === ELEMENTOS DO DOM ===
 const gamesGrid = document.querySelector('.games-grid');
 const filterButtons = document.querySelectorAll('.filter-btn');
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
 const menu = document.querySelector('.menu');
 
-// Inicialização da página quando o conteúdo for totalmente carregado
+// === INICIALIZAÇÃO ===
 document.addEventListener('DOMContentLoaded', () => {
-    // ⭐ INICIALIZA OS ÍCONES DO LUCIDE
+    // Inicializa ícones do Lucide se existir
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();
     }
     
-    // Exibe todos os jogos inicialmente
-    displayGames('all');
+    // Exibe todos os jogos inicialmente usando a função CORRETA
+    renderGames('all');
     
     // Configura o menu móvel
     setupMobileMenu();
+    
+    // Inicia a neve (versão natalina)
+    startSnow();
 });
 
-// Função para exibir os jogos com base na categoria selecionada
-function displayGames(category) {
+// === FUNÇÕES PRINCIPAIS ===
+
+// 1. Renderizar Jogos (Com estrutura HTML Nova)
+function renderGames(filter) {
     gamesGrid.innerHTML = '';
     
-    const filteredGames = category === 'all' 
-        ? games 
-        : games.filter(game => game.category === category);
-    
-    filteredGames.forEach(game => {
-        const imageSrc = game.image || `/placeholder.svg?height=200&width=300`;
+    const filtered = filter === 'all' 
+        ? window.games 
+        : window.games.filter(g => g.category === filter);
         
-        const gameCard = document.createElement('div');
-        gameCard.className = 'game-card';
-        gameCard.innerHTML = `
-            <img src="${imageSrc}" alt="${game.title}" class="game-image">
-            <div class="game-info">
-                <h3 class="game-title">${game.title}</h3>
-                <p class="game-category">${game.category.charAt(0).toUpperCase() + game.category.slice(1)}</p>
-                <div class="game-price">
-                    <span class="price"></span>
-                    <a href="${game.link}" class="rent-btn" target="_blank">Instalar</a>
-                    <span class="price"></span>
+    // Efeito Fade-In suave
+    gamesGrid.style.opacity = '0';
+    gamesGrid.style.transition = 'opacity 0.3s ease';
+    
+    setTimeout(() => gamesGrid.style.opacity = '1', 50);
+
+    filtered.forEach(game => {
+        // Limpeza de título e dados
+        const cleanTitle = game.title.replace(/<[^>]*>?/gm, '');
+        const image = game.image || '/placeholder.svg';
+        const categoryLabel = game.category === 'jogos' ? '🎮 Jogo' : '📱 App';
+        
+        const card = document.createElement('div');
+        card.className = 'game-card';
+        
+        // Estrutura HTML compatível com o CSS de Natal (zoom, floating tag, etc)
+        card.innerHTML = `
+            <div class="card-image-box">
+                <span class="card-tag-floating">${categoryLabel}</span>
+                <img src="${image}" alt="${cleanTitle}" class="card-thumb" loading="lazy">
+            </div>
+            
+            <div class="card-body">
+                <h3 class="card-title">${cleanTitle}</h3>
+                <p class="card-desc" style="font-size: 0.85rem; color: #888;">
+                    Versão: Android ${game.androidVersion}+
+                </p>
+                
+                <div class="card-footer">
+                    <a href="${game.link}" target="_blank" class="install-btn">
+                        <span>Baixar Agora</span>
+                        <i data-lucide="gift" width="18"></i>
+                    </a>
                 </div>
             </div>
         `;
-        
-        gamesGrid.appendChild(gameCard);
+        gamesGrid.appendChild(card);
     });
+    
+    // Atualiza os ícones do Lucide nos novos elementos
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
 }
 
-// Função para o clique dos botões de filtro
+// 2. Filtros
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
+        // Atualiza botões ativos
         filterButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
         
+        // Filtra usando a função renderGames
         const category = button.getAttribute('data-filter');
-        displayGames(category);
+        renderGames(category);
     });
 });
 
-// Função para configurar o menu móvel
+// 3. Menu Mobile
 function setupMobileMenu() {
+    if (!mobileMenuBtn) return;
+    
     mobileMenuBtn.addEventListener('click', () => {
         menu.classList.toggle('active');
         
+        // Animação do ícone de hambúrguer
         const spans = mobileMenuBtn.querySelectorAll('span');
-        spans[0].classList.toggle('rotate-45');
-        spans[1].classList.toggle('opacity-0');
-        spans[2].classList.toggle('-rotate-45');
+        if (menu.classList.contains('active')) {
+            // Se tiver classes de rotação no CSS, pode usar classList, senão manipula style
+            // Aqui mantemos consistência com o estilo anterior
+            if(spans.length >= 3) {
+                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+            }
+        } else {
+            if(spans.length >= 3) {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        }
     });
 }
 
-// Função para o botão 'Ver Todos os Jogos'
+// 4. Botão "Ver Todos" (Rolagem suave e filtro)
 const viewAllButton = document.getElementById('view-all-games');
-
-viewAllButton.addEventListener('click', (event) => {
-    event.preventDefault();
-    displayGames('all');
-    
-    window.scrollTo({
-        top: document.querySelector('#games').offsetTop,
-        behavior: 'smooth'
+if (viewAllButton) {
+    viewAllButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        
+        // Clica virtualmente no botão "Todos"
+        const allBtn = document.querySelector('[data-filter="all"]');
+        if(allBtn) allBtn.click();
+        
+        // Rolagem suave
+        const target = document.querySelector('#games');
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
     });
-});
+}
 
-// Função para rolagem suave para links de navegação
+// 5. Scroll Suave Geral para Links Internos
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
+        // Se for só #, não faz nada
+        if(this.getAttribute('href') === '#') return;
+
         e.preventDefault();
-        
         const targetId = this.getAttribute('href');
         const targetElement = document.querySelector(targetId);
         
         if (targetElement) {
+            // Fecha menu mobile se estiver aberto
+            menu.classList.remove('active');
+            
+            // Reseta ícone menu
+            const spans = mobileMenuBtn ? mobileMenuBtn.querySelectorAll('span') : [];
+            if(spans.length >= 3) {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+
             window.scrollTo({
-                top: targetElement.offsetTop - 80,
+                top: targetElement.offsetTop - 80, // Compensação do header fixo
                 behavior: 'smooth'
             });
-            
-            menu.classList.remove('active');
         }
     });
 });
 
-// Função para adicionar animação aos elementos enquanto rola a página
-const animateOnScroll = () => {
-    const elements = document.querySelectorAll('.step, .pricing-card, .game-card');
-    
-    elements.forEach(element => {
-        const elementPosition = element.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight / 1.3;
+// 6. Efeito de Neve Natalina (Melhorada)
+function startSnow() {
+    // Cria um floco a cada 300ms
+    setInterval(() => {
+        const snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
         
-        if (elementPosition < screenPosition) {
-            element.classList.add('animate');
-        }
-    });
-};
-
-window.addEventListener('scroll', animateOnScroll);
-
-// Configuração do modal de autenticação
-const authModal = document.getElementById('auth-modal');
-const closeModal = document.querySelector('.close-modal');
-const showLoginLink = document.getElementById('show-login');
-const showRegisterLink = document.getElementById('show-register');
-const loginForm = document.getElementById('login-form');
-const registerForm = document.getElementById('register-form');
-const btnEntrar = document.querySelector('.btn-secondary');
-const btnCadastrar = document.querySelector('.btn-primary');
-
-// Verifica se os elementos existem antes de adicionar eventos
-if (btnEntrar) {
-    btnEntrar.addEventListener('click', () => {
-        authModal.style.display = 'flex';
-        loginForm.style.display = 'block';
-        registerForm.style.display = 'none';
-    });
+        // Emojis variados para o Natal
+        const symbols = ['❄', '❅', '❆', '✨']; 
+        snowflake.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+        
+        snowflake.style.left = Math.random() * 100 + 'vw';
+        snowflake.style.opacity = Math.random() * 0.6 + 0.4;
+        snowflake.style.fontSize = Math.random() * 15 + 10 + 'px';
+        snowflake.style.animationDuration = Math.random() * 5 + 3 + 's';
+        
+        document.body.appendChild(snowflake);
+        
+        // Remove depois de cair
+        setTimeout(() => {
+            snowflake.remove();
+        }, 8000);
+    }, 300);
 }
-
-if (btnCadastrar) {
-    btnCadastrar.addEventListener('click', () => {
-        authModal.style.display = 'flex';
-        loginForm.style.display = 'none';
-        registerForm.style.display = 'block';
-    });
-}
-
-if (closeModal) {
-    closeModal.addEventListener('click', () => {
-        authModal.style.display = 'none';
-    });
-}
-
-if (showLoginLink) {
-    showLoginLink.addEventListener('click', () => {
-        loginForm.style.display = 'block';
-        registerForm.style.display = 'none';
-    });
-}
-
-if (showRegisterLink) {
-    showRegisterLink.addEventListener('click', () => {
-        loginForm.style.display = 'none';
-        registerForm.style.display = 'block';
-    });
-}
-
-window.addEventListener('click', (e) => {
-    if (e.target === authModal) {
-        authModal.style.display = 'none';
-    }
-});
-
-const ctaCadastrar = document.getElementById('cta-cadastrar');
-
-if (ctaCadastrar) {
-    ctaCadastrar.addEventListener('click', function(e) {
-        e.preventDefault();
-        authModal.style.display = 'flex';
-        loginForm.style.display = 'none';
-        registerForm.style.display = 'block';
-    });
-}
-
-
-
-function createSnowflake() {
-            const snowflake = document.createElement('div');
-            snowflake.classList.add('snowflake');
-            snowflake.innerHTML = '❄';
-            snowflake.style.left = Math.random() * window.innerWidth + 'px';
-            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
-            snowflake.style.opacity = Math.random();
-            snowflake.style.fontSize = Math.random() * 20 + 10 + 'px';
-            
-            document.body.appendChild(snowflake);
-            
-            setTimeout(() => {
-                snowflake.remove();
-            }, 5000);
-        }
-
-        setInterval(createSnowflake, 800);
-
-
-
-
-
-
