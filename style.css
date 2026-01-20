@@ -1,26 +1,26 @@
 :root {
-    /* === PALETA DE NATAL === */
-    --xmas-red: #D42426;       /* Vermelho Papai Noel */
-    --xmas-red-dark: #A01214;  /* Vinho Sanguineo */
-    --xmas-green: #165B33;     /* Verde Pinheiro */
-    --xmas-green-light: #146B3A;
-    --xmas-gold: #F8B229;      /* Dourado Estrela */
-    --snow-white: #FFFFFF;
+    /* === PALETA DE CARNAVAL === */
+    /* Cores quentes e vibrantes da Bahia */
+    --carnival-purple: #6A0DAD;      /* Roxo Trio */
+    --carnival-purple-light: #9B59B6;
+    --carnival-orange: #FF7F00;      /* Laranja Pôr do Sol */
+    --carnival-yellow: #FFD700;      /* Dourado Ouro */
+    --carnival-cyan: #00CED1;        /* Azul Mar */
     
     /* Variáveis do Sistema */
-    --primary: var(--xmas-red);
-    --accent: var(--xmas-green);
-    --highlight: var(--xmas-gold);
+    --primary: var(--carnival-purple);
+    --accent: var(--carnival-orange);
+    --highlight: var(--carnival-yellow);
     
     /* Fundo e Texto */
-    --bg-body: #F0F2F5;        /* Neve "suja" (cinza claro) pra dar contraste */
+    --bg-body: #F8F9FA;
     --bg-card: #FFFFFF;
-    --text-dark: #2D3436;
+    --text-dark: #1A1A1A;
     --text-light: #636E72;
     
     /* Efeitos */
-    --shadow-soft: 0 10px 40px -10px rgba(212, 36, 38, 0.15); /* Sombra avermelhada suave */
-    --radius: 24px; /* Bordas bem redondas */
+    --shadow-soft: 0 10px 30px -5px rgba(106, 13, 173, 0.15);
+    --radius: 16px; 
     
     --font-heading: 'Poppins', sans-serif;
     --font-body: 'Inter', sans-serif;
@@ -36,9 +36,11 @@ body {
     color: var(--text-dark);
     line-height: 1.6;
     overflow-x: hidden;
-    /* Fundo com padronagem sutil de "flocos" */
-    background-image: radial-gradient(#d4242610 1px, transparent 1px);
-    background-size: 20px 20px;
+    /* Confete estático no fundo */
+    background-image: radial-gradient(var(--carnival-yellow) 15%, transparent 16%),
+                      radial-gradient(var(--carnival-cyan) 15%, transparent 16%);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
 }
 
 .container {
@@ -47,16 +49,17 @@ body {
     padding: 0 24px;
 }
 
-/* === HEADER (Decorado) === */
+/* === HEADER === */
 header {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.98);
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 3px solid var(--xmas-red); /* Borda vermelha */
+    /* Borda multicolorida estilo fitinha do Bonfim */
+    border-bottom: 4px solid transparent;
+    border-image: linear-gradient(to right, var(--carnival-purple), var(--carnival-orange), var(--carnival-cyan)) 1;
     padding: 1rem 0;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 }
 
 .header-content {
@@ -69,31 +72,15 @@ header {
     font-family: var(--font-heading);
     font-weight: 800;
     font-size: 1.8rem;
-    color: var(--xmas-green); /* Verde árvore */
+    color: var(--text-dark);
     letter-spacing: -1px;
-    display: flex;
-    align-items: center;
 }
 
 .logo span { 
-    color: var(--xmas-red); /* IF em vermelho */
-    position: relative;
+    color: var(--carnival-purple); 
 }
 
-/* Gorro do Papai Noel no Logo */
-.logo span::after {
-    content: '';
-    position: absolute;
-    top: -12px;
-    right: -5px;
-    width: 15px;
-    height: 15px;
-    background: var(--xmas-red);
-    border-radius: 50% 50% 0 0;
-    transform: rotate(45deg);
-    box-shadow: 2px -2px 0 white; /* Pom-pom simulado */
-}
-
+/* Removemos o gorro, entra um detalhe sutil */
 .desktop-nav { display: flex; gap: 2rem; }
 
 .nav-link {
@@ -101,12 +88,15 @@ header {
     color: var(--text-dark);
     font-weight: 600;
     transition: color 0.3s;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
 }
 
-.nav-link:hover { color: var(--xmas-red); }
+.nav-link:hover { color: var(--carnival-orange); }
 
 .btn-cta-small {
-    background: var(--xmas-red);
+    background: linear-gradient(45deg, var(--carnival-purple), var(--carnival-purple-light));
     color: white;
     padding: 0.6rem 1.4rem;
     border-radius: 50px;
@@ -114,27 +104,27 @@ header {
     font-weight: 600;
     font-size: 0.9rem;
     transition: all 0.3s;
-    box-shadow: 0 4px 10px rgba(212, 36, 38, 0.3);
-    border: 2px solid transparent;
+    box-shadow: 0 4px 15px rgba(106, 13, 173, 0.3);
 }
 
 .btn-cta-small:hover {
-    background: white;
-    color: var(--xmas-red);
-    border-color: var(--xmas-red);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(106, 13, 173, 0.5);
 }
 
-.mobile-toggle { display: none; background: none; border: none; cursor: pointer; color: var(--xmas-red); }
+.mobile-toggle { display: none; background: none; border: none; cursor: pointer; color: var(--carnival-purple); }
 .mobile-menu { display: none; }
 
-/* === HERO (A Grande Noite de Natal) === */
+/* === HERO (A Avenida) === */
 .hero {
     position: relative;
-    background: linear-gradient(135deg, var(--xmas-red) 0%, #8E0E00 100%);
+    /* Gradiente vibrante */
+    background: linear-gradient(135deg, var(--carnival-purple) 0%, #4B0082 100%);
     color: white;
-    padding: 6rem 0;
+    padding: 7rem 0;
     overflow: hidden;
-    border-radius: 0 0 50px 50px;
+    /* Corte inclinado pra dar movimento */
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 
 .hero-grid {
@@ -147,16 +137,16 @@ header {
 }
 
 .badge-hero {
-    background: rgba(255, 255, 255, 0.2);
-    color: var(--xmas-gold);
+    background: var(--carnival-yellow);
+    color: var(--carnival-purple);
     padding: 6px 16px;
-    border-radius: 20px;
+    border-radius: 4px;
     font-size: 0.85rem;
-    font-weight: 700;
+    font-weight: 800;
     text-transform: uppercase;
-    border: 1px solid var(--xmas-gold);
     margin-bottom: 1rem;
     display: inline-block;
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
 }
 
 .hero-text h1 {
@@ -164,14 +154,18 @@ header {
     font-size: 3.5rem;
     line-height: 1.1;
     margin-bottom: 1.5rem;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
-.hero-text h1 span { color: var(--xmas-gold); }
+.hero-text h1 span { 
+    color: var(--carnival-orange); 
+    background: -webkit-linear-gradient(45deg, var(--carnival-yellow), var(--carnival-orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 .hero-text p {
     font-size: 1.15rem;
-    color: #FFEBEE;
+    color: rgba(255,255,255,0.9);
     margin-bottom: 2.5rem;
     max-width: 500px;
 }
@@ -179,7 +173,7 @@ header {
 .hero-actions { display: flex; gap: 1rem; }
 
 .btn-primary {
-    background: var(--xmas-green);
+    background: var(--carnival-orange);
     color: white;
     padding: 14px 32px;
     border-radius: 50px;
@@ -189,13 +183,12 @@ header {
     align-items: center;
     gap: 8px;
     transition: all 0.3s;
-    border-bottom: 4px solid var(--xmas-green-light);
+    box-shadow: 0 4px 15px rgba(255, 127, 0, 0.4);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    background: #1e7e48;
-    box-shadow: 0 10px 20px rgba(22, 91, 51, 0.4);
+    background: #FF9F40;
 }
 
 .btn-secondary {
@@ -211,34 +204,32 @@ header {
 
 .btn-secondary:hover {
     background: white;
-    color: var(--xmas-red);
+    color: var(--carnival-purple);
 }
 
 .hero-visual img {
     width: 100%;
     max-width: 450px;
-    filter: drop-shadow(0 0 20px rgba(248, 178, 41, 0.3));
-    animation: float 5s ease-in-out infinite;
+    animation: dance 3s ease-in-out infinite;
 }
 
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
+@keyframes dance {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(2deg); }
+    75% { transform: rotate(-2deg); }
 }
 
-/* === VITRINE & CARDS (Versão Luxo Limpa) === */
-.showcase { 
-    padding: 5rem 0; 
-}
+/* === VITRINE (Abadás) === */
+.showcase { padding: 5rem 0; }
 
 .section-header { text-align: center; margin-bottom: 3rem; }
 .section-header h2 { 
     font-family: var(--font-heading); 
     font-size: 2.5rem; 
-    color: var(--xmas-green);
-    font-weight: 700;
+    color: var(--carnival-purple);
+    font-weight: 800;
 }
-.section-header p { color: var(--text-light); }
+.section-header p { color: var(--text-light); font-size: 1.1rem; }
 
 .filter-container {
     display: flex;
@@ -250,23 +241,26 @@ header {
 
 .filter-btn {
     padding: 10px 24px;
-    border-radius: 50px;
+    border-radius: 8px;
     border: 2px solid #E5E7EB;
     background: white;
     color: var(--text-light);
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.3s;
+    text-transform: uppercase;
+    font-size: 0.85rem;
 }
 
 .filter-btn.active, .filter-btn:hover {
-    background: var(--xmas-red);
+    background: var(--carnival-purple);
     color: white;
-    border-color: var(--xmas-red);
-    box-shadow: 0 4px 15px rgba(212, 36, 38, 0.3);
+    border-color: var(--carnival-purple);
+    box-shadow: 4px 4px 0 var(--carnival-orange); /* Sombra dura estilo pop-art */
+    transform: translate(-2px, -2px);
 }
 
-/* GRID E CARDS NOVOS */
+/* GRID E CARDS */
 .games-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -279,25 +273,22 @@ header {
     border-radius: var(--radius);
     overflow: hidden;
     position: relative;
-    /* Sombra vermelha bem suave e elegante */
     box-shadow: var(--shadow-soft);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 1px solid rgba(255,255,255,0.8);
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
 }
 
 .game-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 50px -10px rgba(212, 36, 38, 0.3);
-    z-index: 10;
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(106, 13, 173, 0.2);
 }
 
-/* Container da imagem para o zoom */
 .card-image-box {
     width: 100%;
     height: 180px;
     overflow: hidden;
     position: relative;
-    border-radius: 24px 24px 0 0;
+    background: #f0f0f0;
 }
 
 .card-thumb {
@@ -307,87 +298,58 @@ header {
     transition: transform 0.6s ease;
 }
 
-.game-card:hover .card-thumb {
-    transform: scale(1.1);
-}
+.game-card:hover .card-thumb { transform: scale(1.05); }
 
-/* Etiqueta flutuante */
 .card-tag-floating {
     position: absolute;
     top: 15px;
     right: 15px;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(4px);
-    padding: 6px 12px;
-    border-radius: 20px;
+    background: var(--carnival-yellow);
+    color: var(--text-dark);
+    padding: 4px 10px;
+    border-radius: 4px;
     font-size: 0.75rem;
     font-weight: 800;
-    color: var(--xmas-red);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-transform: uppercase;
     z-index: 2;
 }
 
 .card-body {
     padding: 1.5rem;
-    background: white;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    position: relative;
-}
-
-/* Linha dourada sutil */
-.card-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 3px;
-    background: var(--xmas-gold);
-    border-radius: 2px;
-    opacity: 0.5;
 }
 
 .card-title {
     font-size: 1.25rem;
     font-weight: 700;
     color: var(--text-dark);
-    margin-top: 0.5rem;
-    line-height: 1.3;
 }
 
 .card-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: auto;
-    padding-top: 1rem;
+    margin-top: 1rem;
 }
 
-/* Botão de instalação */
 .install-btn {
     width: 100%;
-    text-align: center;
-    background: linear-gradient(135deg, var(--xmas-red) 0%, #B71C1C 100%);
-    color: white;
-    padding: 12px;
-    border-radius: 12px;
+    background: white;
+    color: var(--carnival-purple);
+    border: 2px solid var(--carnival-purple);
+    padding: 10px;
+    border-radius: 8px;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: all 0.3s;
+    font-weight: 700;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8px;
-    box-shadow: 0 4px 15px rgba(212, 36, 38, 0.2);
+    transition: all 0.2s;
 }
 
 .install-btn:hover {
-    box-shadow: 0 8px 25px rgba(212, 36, 38, 0.4);
-    transform: scale(1.02);
+    background: var(--carnival-purple);
+    color: white;
 }
 
 /* === NOTÍCIAS & FEED === */
@@ -397,17 +359,12 @@ header {
     position: relative;
 }
 
+/* Barra colorida no topo da seção */
 .social-feed::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 10px;
-    background: repeating-linear-gradient(
-        45deg,
-        var(--xmas-red),
-        var(--xmas-red) 20px,
-        var(--xmas-green) 20px,
-        var(--xmas-green) 40px
-    );
+    top: 0; left: 0; width: 100%; height: 6px;
+    background: linear-gradient(to right, var(--carnival-cyan), var(--carnival-purple), var(--carnival-orange));
 }
 
 .insta-grid {
@@ -418,31 +375,28 @@ header {
 }
 
 .insta-item {
-    background: white;
+    background: #F8F9FA;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    border: 2px solid var(--xmas-gold);
+    border: 1px solid #eee;
+    min-height: 300px; /* Apenas para visualização sem o embed real */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* === RODAPÉ === */
 footer {
-    background: var(--xmas-green);
+    background: var(--text-dark);
     color: white;
     padding: 4rem 0;
     text-align: center;
+    border-top: 5px solid var(--carnival-orange);
 }
 
-.footer-brand h2 { font-size: 2rem; margin-bottom: 0.5rem; color: var(--xmas-gold); }
-.footer-links p { color: rgba(255,255,255,0.8); }
-
-/* === NEVE === */
-.snowflake {
-    position: fixed; top: -10px; color: #fff; z-index: 9999;
-    pointer-events: none; animation: fall linear forwards;
-    text-shadow: 0 0 5px rgba(255,255,255,0.8);
-}
-@keyframes fall { to { transform: translateY(105vh) rotate(360deg); } }
+.footer-brand h2 { font-size: 2rem; margin-bottom: 0.5rem; color: white; }
+.footer-brand span { color: var(--carnival-cyan); }
+.footer-links p { color: rgba(255,255,255,0.6); font-size: 0.9rem; }
 
 /* === RESPONSIVO === */
 @media (max-width: 768px) {
@@ -457,7 +411,7 @@ footer {
         top: 100%; left: 0; right: 0;
         box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         flex-direction: column;
-        border-top: 3px solid var(--xmas-red);
+        border-top: 3px solid var(--carnival-purple);
     }
     
     .mobile-menu.active { display: flex; }
@@ -473,5 +427,5 @@ footer {
     .hero-visual { display: none; }
     .hero-text h1 { font-size: 2.5rem; }
     
-    .hero { border-radius: 0 0 30px 30px; }
+    .hero { clip-path: none; padding-bottom: 4rem; }
 }
